@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BankManagementSystem
 {
-    public partial class LogUI : Form
+    public partial class LoginUI : Form
     {
-        public LogUI()
+        public LoginUI()
         {
             InitializeComponent();
             ActiveControl = LoginBtn;

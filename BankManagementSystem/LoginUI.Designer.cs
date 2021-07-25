@@ -1,7 +1,7 @@
 ﻿
 namespace BankManagementSystem
 {
-    partial class LogUI
+    partial class LoginUI
     {
         /// <summary>
         /// Required designer variable.

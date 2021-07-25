@@ -88,7 +88,7 @@ namespace BankManagementSystem
         {
 
             this.Close();
-            new LogUI().Show();
+            new LoginUI().Show();
         }
     }
 }
