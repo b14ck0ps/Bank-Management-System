@@ -42,7 +42,8 @@ namespace BankManagementSystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            new DashBoard().Show();
         }
 
         private void LnkRegistration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
