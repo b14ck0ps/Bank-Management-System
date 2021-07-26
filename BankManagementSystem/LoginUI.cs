@@ -16,6 +16,15 @@ namespace BankManagementSystem
         {
             InitializeComponent();
             ActiveControl = LoginBtn;
+            if (UILogics.IsCustomer())
+            {
+                Text = "Login As Customer";
+            }
+            if (UILogics.IsEmployee())
+            {
+                Text = "Log In as Employee";
+            }
+            
         }
         #region place holder logics
         private void UsernameTextbox_Enter(object sender, EventArgs e)

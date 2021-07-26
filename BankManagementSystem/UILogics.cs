@@ -10,12 +10,34 @@ namespace BankManagementSystem
 {
     public static class UILogics 
     {
-       /// <summary>
-       /// Using for place holder When enter to make the field empty
-       /// </summary>
-       /// <param name="textBox">Enter the textBox component (name)</param>
-       /// <param name="placeholder">Enter tetxBox component TEXT string</param>
-       public static void EnterUpdate(TextBox textBox, string placeholder)
+        public static UserType User;
+        
+        public enum UserType
+        {
+            Employee,
+            Customer 
+            
+        }
+
+        public static bool IsCustomer()
+        {
+            if (User == UserType.Customer)
+                   return true;           
+            return false;
+        }
+        public static bool IsEmployee()
+        {
+            if (User == UserType.Employee)
+                return true;
+            return false;
+        }
+
+        /// <summary>
+        /// Using for place holder When enter to make the field empty
+        /// </summary>
+        /// <param name="textBox">Enter the textBox component (name)</param>
+        /// <param name="placeholder">Enter tetxBox component TEXT string</param>
+        public static void EnterUpdate(TextBox textBox, string placeholder)
         {
             if (textBox.Text == placeholder)
             {

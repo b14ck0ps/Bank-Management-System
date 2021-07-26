@@ -51,22 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashboardForms\Deposit.cs">
+    <Compile Include="CutomerDashboardForms\Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardForms\Deposit.Designer.cs">
+    <Compile Include="CutomerDashboardForms\Deposit.Designer.cs">
       <DependentUpon>Deposit.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashboardForms\Home.cs">
+    <Compile Include="CutomerDashboardForms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardForms\Home.Designer.cs">
+    <Compile Include="CutomerDashboardForms\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashboardForms\Withdraw.cs">
+    <Compile Include="CutomerDashboardForms\Withdraw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardForms\Withdraw.Designer.cs">
+    <Compile Include="CutomerDashboardForms\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
     <Compile Include="DashBoard.cs">
@@ -74,6 +74,12 @@
     </Compile>
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeUI.Designer.cs">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrationUI.cs">
       <SubType>Form</SubType>
@@ -90,13 +96,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UILogics.cs" />
-    <EmbeddedResource Include="DashboardForms\Deposit.resx">
+    <EmbeddedResource Include="CutomerDashboardForms\Deposit.resx">
       <DependentUpon>Deposit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardForms\Home.resx">
+    <EmbeddedResource Include="CutomerDashboardForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardForms\Withdraw.resx">
+    <EmbeddedResource Include="CutomerDashboardForms\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="RegistrationUI.resx">
       <DependentUpon>RegistrationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeUI.resx">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -139,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cardHolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\getStarted.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
