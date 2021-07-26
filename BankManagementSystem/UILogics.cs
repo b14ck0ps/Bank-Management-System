@@ -36,6 +36,20 @@ namespace BankManagementSystem
                 textBox.ForeColor = Color.DarkGray;
             }
         }
+        /// <summary>
+        /// This method load form inside a panel
+        /// </summary>
+        /// <param name="panel">Enter the panel you want to load the form</param>
+        /// <param name="form">Enter the form you want to load inside the panel</param>
+        public static void LoadForm(Panel panel,Form form)
+        {
+            if (panel.Controls.Count > 0) { 
+                panel.Controls.RemoveAt(0); }
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panel.Controls.Add(form);
+            form.Show();
+        }
     }
     
 
