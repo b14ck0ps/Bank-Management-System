@@ -39,7 +39,9 @@ namespace BankManagementSystem.Dashboard_Forms
             this.BalanceLbl = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // WelcomeLbl
@@ -152,12 +154,23 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::BankManagementSystem.Properties.Resources.dpHolder;
-            this.pictureBox1.Location = new System.Drawing.Point(539, 124);
+            this.pictureBox1.Location = new System.Drawing.Point(578, 109);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 107);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::BankManagementSystem.Properties.Resources.cardHolder;
+            this.pictureBox2.Location = new System.Drawing.Point(578, 228);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // Home
             // 
@@ -165,6 +178,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 390);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BalanceLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ValidationLbl);
@@ -182,6 +196,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.ShowIcon = false;
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +214,6 @@ namespace BankManagementSystem.Dashboard_Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label BalanceLbl;
         private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
