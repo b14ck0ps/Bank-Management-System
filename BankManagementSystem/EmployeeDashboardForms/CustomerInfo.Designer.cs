@@ -37,9 +37,10 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.CustomerdataGridView.BackgroundColor = System.Drawing.Color.White;
             this.CustomerdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerdataGridView.Location = new System.Drawing.Point(2, 1);
+            this.CustomerdataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerdataGridView.Location = new System.Drawing.Point(0, 0);
             this.CustomerdataGridView.Name = "CustomerdataGridView";
-            this.CustomerdataGridView.Size = new System.Drawing.Size(684, 387);
+            this.CustomerdataGridView.Size = new System.Drawing.Size(690, 390);
             this.CustomerdataGridView.TabIndex = 0;
             // 
             // CustomerInfo
@@ -51,7 +52,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.Controls.Add(this.CustomerdataGridView);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CustomerInfo";
             this.Text = "CustomerInfo";
             ((System.ComponentModel.ISupportInitialize)(this.CustomerdataGridView)).EndInit();

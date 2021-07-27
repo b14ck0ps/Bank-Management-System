@@ -48,6 +48,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
@@ -59,6 +60,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
@@ -70,6 +72,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
@@ -81,6 +84,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
@@ -92,6 +96,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
@@ -103,6 +108,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // BalanceTextBox
             // 
+            this.BalanceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BalanceTextBox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.BalanceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BalanceTextBox.Location = new System.Drawing.Point(254, 309);
@@ -113,6 +119,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // UsernameLbl
             // 
+            this.UsernameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UsernameLbl.AutoSize = true;
             this.UsernameLbl.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLbl.ForeColor = System.Drawing.Color.DimGray;
@@ -124,6 +131,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // Nidtextbox
             // 
+            this.Nidtextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Nidtextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Nidtextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Nidtextbox.Location = new System.Drawing.Point(254, 267);
@@ -134,6 +142,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // AddressTextbox
             // 
+            this.AddressTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddressTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.AddressTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddressTextbox.Location = new System.Drawing.Point(254, 218);
@@ -144,6 +153,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // PhoneTextBox
             // 
+            this.PhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PhoneTextBox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.PhoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PhoneTextBox.Location = new System.Drawing.Point(254, 171);
@@ -154,6 +164,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // EmailTextbox
             // 
+            this.EmailTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmailTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.EmailTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.EmailTextbox.Location = new System.Drawing.Point(254, 122);
@@ -164,6 +175,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // SearchBtn
             // 
+            this.SearchBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,6 +189,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // UsernameTextbox
             // 
+            this.UsernameTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UsernameTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.UsernameTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.UsernameTextbox.Location = new System.Drawing.Point(279, 53);
@@ -186,6 +199,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,6 +213,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

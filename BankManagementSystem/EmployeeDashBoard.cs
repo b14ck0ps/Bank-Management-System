@@ -33,7 +33,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.WhiteSmoke;
             CustomerInfoBtn.BackColor = Color.White;
             EditInfoBtn.BackColor = Color.White;
-            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Home());
+            UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.Home());
         }
 
         private void CustomerInfoBtn_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.White;
             CustomerInfoBtn.BackColor = Color.WhiteSmoke;
             EditInfoBtn.BackColor = Color.White;
-            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Deposit());
+            UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.CustomerInfo());
         }
 
         private void EditInfoBtn_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.White;
             CustomerInfoBtn.BackColor = Color.White;
             EditInfoBtn.BackColor = Color.WhiteSmoke;
-            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Withdraw());
+            UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.EditInfo());
         }
     }
 }
