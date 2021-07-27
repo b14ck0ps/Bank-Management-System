@@ -13,7 +13,7 @@ namespace BankDatabaseAccess
 
        public enum Error
         {
-            Invalid = 4001
+            UsernameExist = 4001
         }
 
         public static int Execute(string query)
@@ -25,10 +25,9 @@ namespace BankDatabaseAccess
                     connection.Open();
                     return new SqlCommand(query, connection).ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch (SqlException)
                 {
-
-                    return (int)Error.Invalid;
+                   return (int)Error.UsernameExist;
                 }
 
             }

@@ -109,20 +109,20 @@ namespace BankManagementSystem
         #region Message for Users
         private void UpdatedDB(int EffectedRow)
         {
-            if (EffectedRow == (int)DatabaseConnection.Error.Invalid)
+            if (EffectedRow == (int)DatabaseConnection.Error.UsernameExist)
             {
-                MessageBox.Show("Invalid Inputs");
+                MessageBox.Show("Username Already Exist!");
 
             }
             else if (EffectedRow > 0)
             {
-                MessageBox.Show("Account Created Succesfully");
+                MessageBox.Show("Account Created Succesfully.");
                 this.Close();
                 new LoginUI().Show();
             }
             else
             {
-                MessageBox.Show(" Something Went Wrong!");
+                MessageBox.Show("Something Went Wrong!");
             }
         }
         #endregion
