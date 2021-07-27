@@ -84,19 +84,18 @@ namespace BankManagementSystem
         #endregion
         private void RegistrationBtn_Click(object sender, EventArgs e)
         {
-            if (UILogics.IsEmployee())
+            PersonModel User = new EmployeeModel
             {
-                PersonModel Employee = new EmployeeModel
-                {
-                    Username = UsernameTextbox.Text,
-                    Password = PasswordTextbox.Text,
-                    Eamil = EmailTextbox.Text,
-                    Phone = PhoneTextBox.Text,
-                    Nid = Nidtextbox.Text
-                };
-
-                UpdatedDB(new EmployeeOperations().Insert(Employee));
-            }
+                Username = UsernameTextbox.Text,
+                Password = PasswordTextbox.Text,
+                Eamil = EmailTextbox.Text,
+                Phone = PhoneTextBox.Text,
+                Nid = Nidtextbox.Text
+            };
+            if (UILogics.IsEmployee())
+                UpdatedDB(new EmployeeOperations().Insert(User));
+            if (UILogics.IsCustomer())
+                UpdatedDB(new CustomerOperation().Update(User));
         }
 
         private void LnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
