@@ -46,6 +46,7 @@
     <Compile Include="DatabaseOperation\CustomerOperation.cs" />
     <Compile Include="DatabaseOperation\EmployeeOperations.cs" />
     <Compile Include="DatabaseOperation\IOperations.cs" />
+    <Compile Include="DatabaseOperation\ITransaction.cs" />
     <Compile Include="EntityModel\CustomerModel.cs" />
     <Compile Include="EntityModel\EmployeeModel.cs" />
     <Compile Include="EntityModel\PersonModel.cs" />
