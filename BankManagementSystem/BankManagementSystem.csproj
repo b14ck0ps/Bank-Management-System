@@ -81,6 +81,24 @@
     <Compile Include="EmployeeDashBoard.Designer.cs">
       <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeDashboardForms\CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboardForms\CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboardForms\EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboardForms\EditInfo.Designer.cs">
+      <DependentUpon>EditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboardForms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboardForms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +134,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDashBoard.resx">
       <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashboardForms\CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashboardForms\EditInfo.resx">
+      <DependentUpon>EditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashboardForms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
@@ -161,8 +188,6 @@
   <ItemGroup>
     <None Include="Resources\getStarted.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EmployeeDashboardForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
