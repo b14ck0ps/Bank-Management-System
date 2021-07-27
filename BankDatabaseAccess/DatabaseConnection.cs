@@ -11,12 +11,12 @@ namespace BankDatabaseAccess
     {
         public static readonly string Connection = System.Configuration.ConfigurationManager.ConnectionStrings["OpenBankLocal"].ConnectionString;
 
-        enum Error
+       public enum Error
         {
             Invalid = 4001
         }
 
-        private static int Execute(string query)
+        public static int Execute(string query)
         {
             using (var connection = new SqlConnection(Connection))
             {

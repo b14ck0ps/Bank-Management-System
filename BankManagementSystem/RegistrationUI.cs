@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BankDatabaseAccess;
+using BankDatabaseAccess.DatabaseOperation;
+using BankDatabaseAccess.EntityModel;
+using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BankManagementSystem
 {
@@ -89,8 +84,19 @@ namespace BankManagementSystem
         #endregion
         private void RegistrationBtn_Click(object sender, EventArgs e)
         {
-            //TODO - Add registraion Logics
-            //TODO - Save data into the data base
+            if (UILogics.IsEmployee())
+            {
+                PersonModel Employee = new EmployeeModel
+                {
+                    Username = UsernameTextbox.Text,
+                    Password = PasswordTextbox.Text,
+                    Eamil = EmailTextbox.Text,
+                    Phone = PhoneTextBox.Text,
+                    Nid = Nidtextbox.Text
+                };
+
+                UpdatedDB(new EmployeeOperations().Insert(Employee));
+            }
         }
 
         private void LnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -99,5 +105,26 @@ namespace BankManagementSystem
             this.Close();
             new LoginUI().Show();
         }
+
+        #region Message for Users
+        private void UpdatedDB(int EffectedRow)
+        {
+            if (EffectedRow == (int)DatabaseConnection.Error.Invalid)
+            {
+                MessageBox.Show("Invalid Inputs");
+
+            }
+            else if (EffectedRow > 0)
+            {
+                MessageBox.Show("Account Created Succesfully");
+                this.Close();
+                new LoginUI().Show();
+            }
+            else
+            {
+                MessageBox.Show(" Something Went Wrong!");
+            }
+        }
+        #endregion
     }
 }

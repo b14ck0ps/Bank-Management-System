@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankDatabaseAccess.EntityModel
 {
-    class EmployeeModel : PersonModel
+    public class EmployeeModel : PersonModel
     {
         /// <summary>
         /// This is Employee's Salary. This value is a get only value. This value can not set by any Users.
