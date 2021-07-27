@@ -34,6 +34,7 @@ namespace BankManagementSystem
             this.LoginBtn = new System.Windows.Forms.Button();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.LnkRegistration = new System.Windows.Forms.LinkLabel();
+            this.HomeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +75,7 @@ namespace BankManagementSystem
             // 
             // LogoPictureBox
             // 
+            this.LogoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoPictureBox.Image = global::BankManagementSystem.Properties.Resources.Logo;
             this.LogoPictureBox.Location = new System.Drawing.Point(42, 12);
             this.LogoPictureBox.Name = "LogoPictureBox";
@@ -81,6 +83,7 @@ namespace BankManagementSystem
             this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPictureBox.TabIndex = 3;
             this.LogoPictureBox.TabStop = false;
+            this.LogoPictureBox.Click += new System.EventHandler(this.LogoPictureBox_Click);
             // 
             // LnkRegistration
             // 
@@ -94,12 +97,27 @@ namespace BankManagementSystem
             this.LnkRegistration.Text = "Need An Account?";
             this.LnkRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkRegistration_LinkClicked);
             // 
-            // LogUI
+            // HomeLbl
+            // 
+            this.HomeLbl.AutoSize = true;
+            this.HomeLbl.BackColor = System.Drawing.Color.White;
+            this.HomeLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HomeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeLbl.ForeColor = System.Drawing.Color.ForestGreen;
+            this.HomeLbl.Location = new System.Drawing.Point(170, 110);
+            this.HomeLbl.Name = "HomeLbl";
+            this.HomeLbl.Size = new System.Drawing.Size(45, 17);
+            this.HomeLbl.TabIndex = 5;
+            this.HomeLbl.Text = "Home";
+            this.HomeLbl.Click += new System.EventHandler(this.HomeLbl_Click);
+            // 
+            // LoginUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(396, 527);
+            this.Controls.Add(this.HomeLbl);
             this.Controls.Add(this.LnkRegistration);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.LoginBtn);
@@ -110,7 +128,7 @@ namespace BankManagementSystem
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LogUI";
+            this.Name = "LoginUI";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -127,6 +145,7 @@ namespace BankManagementSystem
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.LinkLabel LnkRegistration;
+        private System.Windows.Forms.Label HomeLbl;
     }
 }
 

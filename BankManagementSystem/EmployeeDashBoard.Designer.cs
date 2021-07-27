@@ -94,6 +94,7 @@ namespace BankManagementSystem
             this.LogoutBtn.TabIndex = 4;
             this.LogoutBtn.Text = "Logout";
             this.LogoutBtn.UseVisualStyleBackColor = false;
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click_1);
             // 
             // NavigationPanel
             // 

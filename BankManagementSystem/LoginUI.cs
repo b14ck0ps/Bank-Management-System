@@ -52,13 +52,33 @@ namespace BankManagementSystem
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new CustomerDashBoard().Show();
+            if (UILogics.IsCustomer())
+            {
+                 new CustomerDashBoard().Show();
+            }
+            if (UILogics.IsEmployee())
+            {
+                new EmployeeDashBoard().Show();
+            }
+            
         }
 
         private void LnkRegistration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             new RegistrationUI().Show();
+        }
+
+        private void LogoPictureBox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new WelcomeUI().Show();
+        }
+
+        private void HomeLbl_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new WelcomeUI().Show();
         }
     }
 }

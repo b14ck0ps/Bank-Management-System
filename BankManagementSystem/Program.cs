@@ -16,8 +16,7 @@ namespace BankManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new WelcomeUI());
-            Application.Run(new EmployeeDashBoard());
+            Application.Run(new WelcomeUI());
         }
     }
 }

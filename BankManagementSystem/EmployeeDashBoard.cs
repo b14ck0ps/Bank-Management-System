@@ -51,5 +51,11 @@ namespace BankManagementSystem
             EditInfoBtn.BackColor = Color.WhiteSmoke;
             UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.EditInfo());
         }
+
+        private void LogoutBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            new LoginUI().Show();
+        }
     }
 }
