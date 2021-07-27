@@ -114,6 +114,9 @@
     <EmbeddedResource Include="CustomerDashBoard.resx">
       <DependentUpon>CustomerDashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashBoard.resx">
+      <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
     </EmbeddedResource>

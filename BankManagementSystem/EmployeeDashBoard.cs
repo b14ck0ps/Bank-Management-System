@@ -15,6 +15,41 @@ namespace BankManagementSystem
         public EmployeeDashBoard()
         {
             InitializeComponent();
+            Load += DashBoard_Shown;
+        }
+
+        private void DashBoard_Shown(object sender, EventArgs e)
+        {
+            HomeBtn.PerformClick();
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new LoginUI().Show();
+        }
+        private void HomeBtn_Click_1(object sender, EventArgs e)
+        {
+            HomeBtn.BackColor = Color.WhiteSmoke;
+            CustomerInfoBtn.BackColor = Color.White;
+            EditInfoBtn.BackColor = Color.White;
+            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Home());
+        }
+
+        private void CustomerInfoBtn_Click(object sender, EventArgs e)
+        {
+            HomeBtn.BackColor = Color.White;
+            CustomerInfoBtn.BackColor = Color.WhiteSmoke;
+            EditInfoBtn.BackColor = Color.White;
+            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Deposit());
+        }
+
+        private void EditInfoBtn_Click(object sender, EventArgs e)
+        {
+            HomeBtn.BackColor = Color.White;
+            CustomerInfoBtn.BackColor = Color.White;
+            EditInfoBtn.BackColor = Color.WhiteSmoke;
+            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Withdraw());
         }
     }
 }
