@@ -51,6 +51,8 @@ namespace BankManagementSystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            // TODO - Check Login credentials
+            // TODO - IF customer GOTO Customer Dbord IF Emp GOTO Emp Dbord
             this.Hide();
             if (UILogics.IsCustomer())
             {

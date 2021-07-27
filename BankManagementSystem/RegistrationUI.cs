@@ -17,6 +17,14 @@ namespace BankManagementSystem
         {
             InitializeComponent();
             ActiveControl = RegistrationBtn;
+            if (UILogics.IsCustomer())
+            {
+                Text = "Registration For Customer Account";
+            }
+            if (UILogics.IsEmployee())
+            {
+                Text = "Registration For Employee Account";
+            }
         }
         #region Place Holder logics
         private void UsernameTextbox_Enter(object sender, EventArgs e)
@@ -81,7 +89,8 @@ namespace BankManagementSystem
         #endregion
         private void RegistrationBtn_Click(object sender, EventArgs e)
         {
-            
+            //TODO - Add registraion Logics
+            //TODO - Save data into the data base
         }
 
         private void LnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
