@@ -95,7 +95,7 @@ namespace BankManagementSystem
             if (UILogics.IsEmployee())
                 UpdatedDB(new EmployeeOperations().Insert(User));
             if (UILogics.IsCustomer())
-                UpdatedDB(new CustomerOperation().Update(User));
+                UpdatedDB(new CustomerOperation().Insert(User));
         }
 
         private void LnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
