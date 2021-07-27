@@ -69,11 +69,17 @@
     <Compile Include="CutomerDashboardForms\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashBoard.cs">
+    <Compile Include="CustomerDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBoard.Designer.cs">
-      <DependentUpon>DashBoard.cs</DependentUpon>
+    <Compile Include="CustomerDashBoard.Designer.cs">
+      <DependentUpon>CustomerDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashBoard.Designer.cs">
+      <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="WelcomeUI.cs">
       <SubType>Form</SubType>
@@ -105,8 +111,8 @@
     <EmbeddedResource Include="CutomerDashboardForms\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoard.resx">
-      <DependentUpon>DashBoard.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerDashBoard.resx">
+      <DependentUpon>CustomerDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
@@ -151,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\getStarted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EmployeeDashboardForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

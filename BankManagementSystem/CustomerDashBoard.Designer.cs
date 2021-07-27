@@ -1,7 +1,7 @@
 ﻿
 namespace BankManagementSystem
 {
-    partial class DashBoard
+    partial class CustomerDashBoard
     {
         /// <summary>
         /// Required designer variable.

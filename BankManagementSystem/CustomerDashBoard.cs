@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BankManagementSystem
 {
-    public partial class DashBoard : Form
+    public partial class CustomerDashBoard : Form
     {
-        public DashBoard()
+        public CustomerDashBoard()
         {
             InitializeComponent();
             Load += DashBoard_Shown;
