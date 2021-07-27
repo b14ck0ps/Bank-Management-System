@@ -12,13 +12,14 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// <returns>Return Row Number</returns>
         public int Insert(PersonModel personModel)
         {
+            decimal initialBalance = 1000;
             var query = @"INSERT INTO dbo.[dbo.Customers](Username,Password,Email,Phone,Nid,Balance) 
                           VALUES ('" + personModel.Username + "'," +
                           "'" + personModel.Password + "'," +
                           "'" + personModel.Eamil + "'," +
                           "'" + personModel.Phone + "'," +
                           "'" + personModel.Nid + "'," +
-                          "'" + new Random().Next(500, 1000).ToString() + "')"; // generates Opening Balance from 500 to 1k
+                          "'" + initialBalance + "')"; // generates Opening Balance from 500 to 1k
             return DatabaseConnection.Execute(query);
         }
 
