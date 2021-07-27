@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="DatabaseOperation\CustomerOperation.cs" />
+    <Compile Include="DatabaseOperation\DataReader.cs" />
     <Compile Include="DatabaseOperation\EmployeeOperations.cs" />
     <Compile Include="DatabaseOperation\IOperations.cs" />
     <Compile Include="DatabaseOperation\ITransaction.cs" />

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BankDatabaseAccess.EntityModel;
+using BankDatabaseAccess.DatabaseOperation;
+using System;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BankManagementSystem
 {
@@ -51,16 +47,69 @@ namespace BankManagementSystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            // TODO - Check Login credentials
-            // TODO - IF customer GOTO Customer Dbord IF Emp GOTO Emp Dbord
-            this.Hide();
+             DataTable data;
+             string username, password;
+
             if (UILogics.IsCustomer())
             {
-                 new CustomerDashBoard().Show();
+                
+                PersonModel customerModel = new CustomerModel
+                {
+                    Username = UsernameTextbox.Text,
+                    Password = PasswordTextbox.Text
+                };
+                try
+                {
+                     data = new DataReader().GetData(customerModel, UILogics.IsCustomer(), UILogics.IsEmployee());
+                     username = data.Rows[0][0].ToString();
+                     password = data.Rows[0][1].ToString();
+                    if (Authentication(username, password))
+                    {
+                        new CustomerDashBoard().Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(error);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show(error);
+                }
+                    
             }
+
             if (UILogics.IsEmployee())
             {
-                new EmployeeDashBoard().Show();
+                PersonModel customerModel = new EmployeeModel
+                {
+                    Username = UsernameTextbox.Text,
+                    Password = PasswordTextbox.Text
+                };
+                try
+                {
+                    data = new DataReader().GetData(customerModel, UILogics.IsCustomer(), UILogics.IsEmployee());
+                    username = data.Rows[0][0].ToString();
+                    password = data.Rows[0][1].ToString();
+                    if (Authentication(username, password))
+                    {
+                        new EmployeeDashBoard().Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(error);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show(error);
+                }
+                 
+                    
             }
             
         }
@@ -82,5 +131,14 @@ namespace BankManagementSystem
             this.Close();
             new WelcomeUI().Show();
         }
+
+        private bool Authentication(string Username, string Password)
+        {
+            if (UsernameTextbox.Text == Username && PasswordTextbox.Text == Password)
+                return true;
+           else
+                return false;
+        }
+        private readonly string error = "Username or password is not correct!";
     }
 }
