@@ -22,7 +22,7 @@ namespace BankManagementSystem.Dashboard_Forms
             {
                 if (amount > 0)
                 {
-                    Confirmation(new CustomerOperation().Deposit(customer,  GetBalance() + amount));
+                    Confirmation(new CustomerOperation().UpdateBalance(customer,  GetBalance() + amount));
                     UpdateUI();
                     
                 }
