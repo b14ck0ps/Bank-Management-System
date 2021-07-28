@@ -19,11 +19,11 @@ namespace BankManagementSystem.Dashboard_Forms
         {
             DataTable data;
             data = new DataReader().GetData(customer, UILogics.IsCustomer(), UILogics.IsEmployee());
-            WelcomeLbl.Text = $"Welcome { data.Rows[0][0] }";
-            NameLbl.Text = $"Username : { data.Rows[0][0] }";
-            NidLbl.Text = $"NID       : { data.Rows[0][4] }";
-            PhoneLbl.Text = $"Phone   : { data.Rows[0][3] }";
-            AddressLbl.Text = $"Address   : { data.Rows[0][6] }";
+            WelcomeLbl.Text = $"Welcome  { data.Rows[0][0] }";
+            _usenameLbl.Text = data.Rows[0][0].ToString();
+            _NIDLbl.Text = data.Rows[0][4].ToString();
+            _phoneLbl.Text = data.Rows[0][3].ToString();
+            _addressLbl.Text = data.Rows[0][6].ToString();
             BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
         }
     }
