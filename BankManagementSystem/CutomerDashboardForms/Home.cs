@@ -1,4 +1,5 @@
-﻿using BankDatabaseAccess.DatabaseOperation;
+﻿using BankDatabaseAccess;
+using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
 using System.Data;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ namespace BankManagementSystem.Dashboard_Forms
 {
     public partial class Home : Form
     {
-        PersonModel customer;
+        private readonly PersonModel customer;
         public Home(PersonModel customer)
         {
             this.customer = customer;
@@ -28,5 +29,46 @@ namespace BankManagementSystem.Dashboard_Forms
             BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
         }
 
+        private void EditLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Visibility(true);
+            EditLnk.Visible = false;
+        }
+        private void UpdateBtn_Click(object sender, System.EventArgs e)
+        {
+            Visibility(false);
+            EditLnk.Visible = true;
+
+            PersonModel personModel = new CustomerModel()
+            {
+                Username = customer.Username,
+                Nid = NidTextbox.Text,
+                Address = AddresstextBox.Text,
+                Eamil = EmailtextBox.Text,
+                Phone = PhoneTextBox.Text,
+            };
+
+            UpdatedDB(new CustomerOperation().Update(personModel));
+            UpdateUi();
+        }
+        private void Visibility(bool @bool)
+        {
+            notChangeableLbl.Visible = @bool;
+            NidTextbox.Visible = @bool;
+            AddresstextBox.Visible = @bool;
+            EmailtextBox.Visible = @bool;
+            PhoneTextBox.Visible = @bool;
+            UpdateBtn.Visible = @bool;
+        }
+
+        #region Message for Users
+        private void UpdatedDB(int EffectedRow)
+        {
+           if (EffectedRow > 0)
+                MessageBox.Show("Update Succesfull.");
+            else
+                MessageBox.Show("Something Went Wrong!");
+        }
+        #endregion
     }
 }

@@ -15,7 +15,7 @@ namespace BankManagementSystem
             Load += DashBoard_Shown;
         }
 
-        private void DashBoard_Shown(object sender, EventArgs e)
+        public void DashBoard_Shown(object sender, EventArgs e)
         {
             HomeBtn.PerformClick();
         }
