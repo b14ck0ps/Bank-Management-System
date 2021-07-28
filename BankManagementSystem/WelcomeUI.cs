@@ -35,5 +35,15 @@ namespace BankManagementSystem
             this.Hide();
             new LoginUI().Show();
         }
+
+        private void GetStartedBtn_MouseHover(object sender, EventArgs e)
+        {
+            GetStartedBtn.Size = new Size(177, 67);
+        }
+
+        private void GetStartedBtn_MouseLeave(object sender, EventArgs e)
+        {
+            GetStartedBtn.Size = new Size(175, 65);
+        }
     }
 }

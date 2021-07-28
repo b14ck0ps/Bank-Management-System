@@ -95,12 +95,14 @@ namespace BankManagementSystem
             this.GetStartedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GetStartedBtn.ForeColor = System.Drawing.Color.Transparent;
             this.GetStartedBtn.Image = global::BankManagementSystem.Properties.Resources.getStarted_;
-            this.GetStartedBtn.Location = new System.Drawing.Point(126, 125);
+            this.GetStartedBtn.Location = new System.Drawing.Point(140, 160);
             this.GetStartedBtn.Name = "GetStartedBtn";
-            this.GetStartedBtn.Size = new System.Drawing.Size(197, 91);
+            this.GetStartedBtn.Size = new System.Drawing.Size(175, 65);
             this.GetStartedBtn.TabIndex = 8;
             this.GetStartedBtn.UseVisualStyleBackColor = true;
             this.GetStartedBtn.Click += new System.EventHandler(this.GetStartedBtn_Click);
+            this.GetStartedBtn.MouseLeave += new System.EventHandler(this.GetStartedBtn_MouseLeave);
+            this.GetStartedBtn.MouseHover += new System.EventHandler(this.GetStartedBtn_MouseHover);
             // 
             // WelcomeUI
             // 
