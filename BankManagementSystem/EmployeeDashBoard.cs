@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankDatabaseAccess.EntityModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace BankManagementSystem
 {
     public partial class EmployeeDashBoard : Form
     {
-        public EmployeeDashBoard()
+        private readonly PersonModel personModel;
+        public EmployeeDashBoard(PersonModel personModel)
         {
+            this.personModel = personModel;
             InitializeComponent();
             Load += DashBoard_Shown;
         }
@@ -33,7 +36,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.WhiteSmoke;
             CustomerInfoBtn.BackColor = Color.White;
             EditInfoBtn.BackColor = Color.White;
-            UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.Home());
+            UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.Home(personModel));
         }
 
         private void CustomerInfoBtn_Click(object sender, EventArgs e)

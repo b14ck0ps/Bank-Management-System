@@ -43,12 +43,26 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// <param name="personModel">Takes an Customer Object</param>
         /// <returns>Returns Row Number</returns>
         public int Update(PersonModel personModel)
-{
+        {
             var query = @"UPDATE dbo.[dbo.Customers] SET 
                         Email = '" + personModel.Eamil + "'," +
                         "Phone = '" + personModel.Phone + "'," +
                         "Nid = '" + personModel.Nid + "'";
 
+            return DatabaseConnection.Execute(query);
+        }
+        /// <summary>
+        /// Update Employee's data from db
+        /// </summary>
+        /// <param name="personModel">takes an employee object</param>
+        /// <returns></returns>
+        public int SelfUpdate(PersonModel personModel)
+        {
+            var query = @"UPDATE dbo.[dbo.Employee] SET 
+                        Email = '" + personModel.Eamil + "'," +
+                        "Phone = '" + personModel.Phone + "'," +
+                        "Address = '" + personModel.Address + "'," +
+                        "Nid = '" + personModel.Nid + "'";
             return DatabaseConnection.Execute(query);
         }
     }

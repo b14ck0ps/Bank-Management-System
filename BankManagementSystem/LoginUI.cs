@@ -83,19 +83,19 @@ namespace BankManagementSystem
 
             if (UILogics.IsEmployee())
             {
-                PersonModel customerModel = new EmployeeModel
+                PersonModel EmployeeModel = new EmployeeModel
                 {
                     Username = UsernameTextbox.Text,
                     Password = PasswordTextbox.Text
                 };
                 try
                 {
-                    data = new DataReader().GetData(customerModel, UILogics.IsCustomer(), UILogics.IsEmployee());
+                    data = new DataReader().GetData(EmployeeModel, UILogics.IsCustomer(), UILogics.IsEmployee());
                     username = data.Rows[0][0].ToString();
                     password = data.Rows[0][1].ToString();
                     if (Authentication(username, password))
                     {
-                        new EmployeeDashBoard().Show();
+                        new EmployeeDashBoard(EmployeeModel).Show();
                         this.Close();
                     }
                     else
