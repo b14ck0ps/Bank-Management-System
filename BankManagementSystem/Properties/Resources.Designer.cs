@@ -83,9 +83,9 @@ namespace BankManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap getStarted {
+        internal static System.Drawing.Bitmap getStarted_ {
             get {
-                object obj = ResourceManager.GetObject("getStarted", resourceCulture);
+                object obj = ResourceManager.GetObject("getStarted_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -102,6 +102,11 @@
     <Compile Include="WelcomeUI.Designer.cs">
       <DependentUpon>WelcomeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,14 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RegistrationUI.resx">
       <DependentUpon>RegistrationUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,13 +183,13 @@
     <None Include="Resources\cardHolder.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\getStarted.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BankDatabaseAccess\BankDatabaseAccess.csproj">
       <Project>{83583728-a1aa-4e28-87eb-4c7fa1a9f350}</Project>
       <Name>BankDatabaseAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\getStarted_.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

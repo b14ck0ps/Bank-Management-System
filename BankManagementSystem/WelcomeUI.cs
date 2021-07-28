@@ -15,7 +15,6 @@ namespace BankManagementSystem
         public WelcomeUI()
         {
             InitializeComponent();
-            UILogics.User = UILogics.UserType.Employee;
         }
 
         private void AppCloseLbl_Click(object sender, EventArgs e)
@@ -28,7 +27,6 @@ namespace BankManagementSystem
             UILogics.User = UILogics.UserType.Customer;
             this.Hide();
             new LoginUI().Show();
-            
         }
 
         private void EmpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -36,7 +34,6 @@ namespace BankManagementSystem
             UILogics.User = UILogics.UserType.Employee;
             this.Hide();
             new LoginUI().Show();
-            
         }
     }
 }
