@@ -46,7 +46,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.White;
             DepositBtn.BackColor = Color.White;
             WithdrawBtn.BackColor = Color.WhiteSmoke;
-            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Withdraw());
+            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Withdraw(personModel));
         }
     }
 }

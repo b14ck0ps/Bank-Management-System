@@ -71,6 +71,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.WithdrawBtn.TabIndex = 11;
             this.WithdrawBtn.Text = "Withdraw";
             this.WithdrawBtn.UseVisualStyleBackColor = false;
+            this.WithdrawBtn.Click += new System.EventHandler(this.WithdrawBtn_Click);
             // 
             // Withdraw
             // 
