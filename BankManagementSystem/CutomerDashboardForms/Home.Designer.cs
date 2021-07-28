@@ -35,7 +35,6 @@ namespace BankManagementSystem.Dashboard_Forms
             this.NidLbl = new System.Windows.Forms.Label();
             this.AddressLbl = new System.Windows.Forms.Label();
             this.PhoneLbl = new System.Windows.Forms.Label();
-            this.ValidationLbl = new System.Windows.Forms.Label();
             this.BalanceLbl = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,7 +43,8 @@ namespace BankManagementSystem.Dashboard_Forms
             this._NIDLbl = new System.Windows.Forms.Label();
             this._addressLbl = new System.Windows.Forms.Label();
             this._phoneLbl = new System.Windows.Forms.Label();
-            this._validLbl = new System.Windows.Forms.Label();
+            this.emailLbl = new System.Windows.Forms.Label();
+            this._eamilLbl = new System.Windows.Forms.Label();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -104,7 +104,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.AddressLbl.AutoSize = true;
             this.AddressLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddressLbl.Location = new System.Drawing.Point(47, 206);
+            this.AddressLbl.Location = new System.Drawing.Point(48, 206);
             this.AddressLbl.Name = "AddressLbl";
             this.AddressLbl.Size = new System.Drawing.Size(105, 25);
             this.AddressLbl.TabIndex = 4;
@@ -116,23 +116,11 @@ namespace BankManagementSystem.Dashboard_Forms
             this.PhoneLbl.AutoSize = true;
             this.PhoneLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PhoneLbl.Location = new System.Drawing.Point(47, 252);
+            this.PhoneLbl.Location = new System.Drawing.Point(16, 177);
             this.PhoneLbl.Name = "PhoneLbl";
             this.PhoneLbl.Size = new System.Drawing.Size(107, 25);
             this.PhoneLbl.TabIndex = 5;
             this.PhoneLbl.Text = "Phone       : ";
-            // 
-            // ValidationLbl
-            // 
-            this.ValidationLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ValidationLbl.AutoSize = true;
-            this.ValidationLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValidationLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ValidationLbl.Location = new System.Drawing.Point(47, 296);
-            this.ValidationLbl.Name = "ValidationLbl";
-            this.ValidationLbl.Size = new System.Drawing.Size(155, 25);
-            this.ValidationLbl.TabIndex = 6;
-            this.ValidationLbl.Text = "Account Valid Till :";
             // 
             // BalanceLbl
             // 
@@ -151,10 +139,12 @@ namespace BankManagementSystem.Dashboard_Forms
             this.infoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.infoPanel.BackColor = System.Drawing.Color.White;
             this.infoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.infoPanel.Controls.Add(this._validLbl);
+            this.infoPanel.Controls.Add(this._eamilLbl);
+            this.infoPanel.Controls.Add(this.emailLbl);
             this.infoPanel.Controls.Add(this._phoneLbl);
             this.infoPanel.Controls.Add(this._addressLbl);
             this.infoPanel.Controls.Add(this._NIDLbl);
+            this.infoPanel.Controls.Add(this.PhoneLbl);
             this.infoPanel.Controls.Add(this._usenameLbl);
             this.infoPanel.Location = new System.Drawing.Point(29, 109);
             this.infoPanel.Name = "infoPanel";
@@ -191,8 +181,9 @@ namespace BankManagementSystem.Dashboard_Forms
             this._usenameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this._usenameLbl.Location = new System.Drawing.Point(129, 16);
             this._usenameLbl.Name = "_usenameLbl";
-            this._usenameLbl.Size = new System.Drawing.Size(0, 25);
+            this._usenameLbl.Size = new System.Drawing.Size(114, 25);
             this._usenameLbl.TabIndex = 11;
+            this._usenameLbl.Text = "<username>";
             // 
             // _NIDLbl
             // 
@@ -202,8 +193,9 @@ namespace BankManagementSystem.Dashboard_Forms
             this._NIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this._NIDLbl.Location = new System.Drawing.Point(129, 52);
             this._NIDLbl.Name = "_NIDLbl";
-            this._NIDLbl.Size = new System.Drawing.Size(0, 25);
+            this._NIDLbl.Size = new System.Drawing.Size(61, 25);
             this._NIDLbl.TabIndex = 12;
+            this._NIDLbl.Text = "<nid>";
             // 
             // _addressLbl
             // 
@@ -211,10 +203,11 @@ namespace BankManagementSystem.Dashboard_Forms
             this._addressLbl.AutoSize = true;
             this._addressLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._addressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._addressLbl.Location = new System.Drawing.Point(128, 96);
+            this._addressLbl.Location = new System.Drawing.Point(129, 96);
             this._addressLbl.Name = "_addressLbl";
-            this._addressLbl.Size = new System.Drawing.Size(0, 25);
+            this._addressLbl.Size = new System.Drawing.Size(97, 25);
             this._addressLbl.TabIndex = 13;
+            this._addressLbl.Text = "<address>";
             // 
             // _phoneLbl
             // 
@@ -222,21 +215,35 @@ namespace BankManagementSystem.Dashboard_Forms
             this._phoneLbl.AutoSize = true;
             this._phoneLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._phoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._phoneLbl.Location = new System.Drawing.Point(130, 142);
+            this._phoneLbl.Location = new System.Drawing.Point(129, 177);
             this._phoneLbl.Name = "_phoneLbl";
-            this._phoneLbl.Size = new System.Drawing.Size(0, 25);
+            this._phoneLbl.Size = new System.Drawing.Size(88, 25);
             this._phoneLbl.TabIndex = 14;
+            this._phoneLbl.Text = "<phone>";
             // 
-            // _validLbl
+            // emailLbl
             // 
-            this._validLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this._validLbl.AutoSize = true;
-            this._validLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._validLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._validLbl.Location = new System.Drawing.Point(178, 186);
-            this._validLbl.Name = "_validLbl";
-            this._validLbl.Size = new System.Drawing.Size(0, 25);
-            this._validLbl.TabIndex = 15;
+            this.emailLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emailLbl.AutoSize = true;
+            this.emailLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.emailLbl.Location = new System.Drawing.Point(18, 140);
+            this.emailLbl.Name = "emailLbl";
+            this.emailLbl.Size = new System.Drawing.Size(104, 25);
+            this.emailLbl.TabIndex = 15;
+            this.emailLbl.Text = "Email        : ";
+            // 
+            // _eamilLbl
+            // 
+            this._eamilLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._eamilLbl.AutoSize = true;
+            this._eamilLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._eamilLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._eamilLbl.Location = new System.Drawing.Point(129, 140);
+            this._eamilLbl.Name = "_eamilLbl";
+            this._eamilLbl.Size = new System.Drawing.Size(79, 25);
+            this._eamilLbl.TabIndex = 16;
+            this._eamilLbl.Text = "<email>";
             // 
             // Home
             // 
@@ -247,8 +254,6 @@ namespace BankManagementSystem.Dashboard_Forms
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BalanceLbl);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ValidationLbl);
-            this.Controls.Add(this.PhoneLbl);
             this.Controls.Add(this.AddressLbl);
             this.Controls.Add(this.NidLbl);
             this.Controls.Add(this.NameLbl);
@@ -278,15 +283,15 @@ namespace BankManagementSystem.Dashboard_Forms
         private System.Windows.Forms.Label NidLbl;
         private System.Windows.Forms.Label AddressLbl;
         private System.Windows.Forms.Label PhoneLbl;
-        private System.Windows.Forms.Label ValidationLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label BalanceLbl;
         private System.Windows.Forms.Panel infoPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label _validLbl;
         private System.Windows.Forms.Label _phoneLbl;
         private System.Windows.Forms.Label _addressLbl;
         private System.Windows.Forms.Label _NIDLbl;
         private System.Windows.Forms.Label _usenameLbl;
+        private System.Windows.Forms.Label _eamilLbl;
+        private System.Windows.Forms.Label emailLbl;
     }
 }

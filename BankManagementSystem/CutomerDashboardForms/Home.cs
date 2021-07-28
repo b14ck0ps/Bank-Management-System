@@ -24,7 +24,9 @@ namespace BankManagementSystem.Dashboard_Forms
             _NIDLbl.Text = data.Rows[0][4].ToString();
             _phoneLbl.Text = data.Rows[0][3].ToString();
             _addressLbl.Text = data.Rows[0][6].ToString();
+            _eamilLbl.Text = data.Rows[0][2].ToString();
             BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
         }
+
     }
 }
