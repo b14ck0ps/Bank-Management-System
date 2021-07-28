@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using BankDatabaseAccess.EntityModel;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankManagementSystem
 {
     public partial class CustomerDashBoard : Form
     {
-        public CustomerDashBoard()
+        private readonly PersonModel personModel;
+        public CustomerDashBoard(PersonModel customer)
         {
+            personModel = customer;
             InitializeComponent();
             Load += DashBoard_Shown;
         }
@@ -33,7 +30,7 @@ namespace BankManagementSystem
            HomeBtn.BackColor = Color.WhiteSmoke;
            DepositBtn.BackColor = Color.White;
            WithdrawBtn.BackColor = Color.White;
-           UILogics.LoadForm(MainPanel,new Dashboard_Forms.Home());
+           UILogics.LoadForm(MainPanel,new Dashboard_Forms.Home(personModel));
         }
 
         private void DepositBtn_Click(object sender, EventArgs e)

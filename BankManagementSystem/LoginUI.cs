@@ -65,7 +65,7 @@ namespace BankManagementSystem
                      password = data.Rows[0][1].ToString();
                     if (Authentication(username, password))
                     {
-                        new CustomerDashBoard().Show();
+                        new CustomerDashBoard(customerModel).Show();
                         this.Close();
                     }
                     else

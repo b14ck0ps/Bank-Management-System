@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankDatabaseAccess.DatabaseOperation;
+using BankDatabaseAccess.EntityModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankManagementSystem.Dashboard_Forms
 {
     public partial class Home : Form
     {
-        public Home()
+        PersonModel customer;
+        public Home(PersonModel customer)
         {
+            this.customer = customer;
             InitializeComponent();
+            UpdateUi();
+            
+        }
+        private void UpdateUi()
+        {
+            DataTable data;
+            data = new DataReader().GetData(customer, UILogics.IsCustomer(), UILogics.IsEmployee());
+            WelcomeLbl.Text = $"Welcome { data.Rows[0][0] }";
+            NameLbl.Text = $"Username : { data.Rows[0][0] }";
+            NidLbl.Text = $"NID       : { data.Rows[0][4] }";
+            PhoneLbl.Text = $"Phone   : { data.Rows[0][3] }";
+            BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
         }
     }
 }
