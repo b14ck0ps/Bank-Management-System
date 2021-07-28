@@ -13,12 +13,12 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// </summary>
         /// <param name="personModel">Take an Customer Object</param>
         /// <param name="amount">Take amount of money to deposit</param>
-        int Deposit(EntityModel.CustomerModel personModel, decimal amount);
+        int Deposit(EntityModel.PersonModel personModel, decimal amount);
         /// <summary>
         /// Withdraw money from Customer balance
         /// </summary>
         /// <param name="personModel">Take an Customer Object</param>
         /// <param name="amount">Take amount of money to withdraw</param> 
-        int Withdraw(EntityModel.CustomerModel personModel, decimal amount);
+        int Withdraw(EntityModel.PersonModel personModel, decimal amount);
     }
 }

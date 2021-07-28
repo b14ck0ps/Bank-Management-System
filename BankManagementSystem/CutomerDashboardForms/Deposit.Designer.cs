@@ -71,6 +71,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.DepositBtn.TabIndex = 11;
             this.DepositBtn.Text = "Deposit";
             this.DepositBtn.UseVisualStyleBackColor = false;
+            this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 
             // Deposit
             // 

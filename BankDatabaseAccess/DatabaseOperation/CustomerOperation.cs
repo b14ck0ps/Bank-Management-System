@@ -41,15 +41,15 @@ namespace BankDatabaseAccess.DatabaseOperation
             return DatabaseConnection.Execute(query);
         }
 
-        public int Deposit(CustomerModel personModel, decimal amount)
+        public int Deposit(PersonModel personModel, decimal amount)
         {
             var query = @"UPDATE dbo.[dbo.Customers] SET 
-                        Balance = '" + amount + "'," +
-                         " WHERE '"+ personModel.Username +"' = Username";
+                        Balance = '" + amount + "'" +
+                         " WHERE Username = '" + personModel.Username +"'";
             return DatabaseConnection.Execute(query);
         }
 
-        public int Withdraw(CustomerModel personModel, decimal amount)
+        public int Withdraw(PersonModel personModel, decimal amount)
         {
             //TODO - Withdraw Logic 
             throw new NotImplementedException();
