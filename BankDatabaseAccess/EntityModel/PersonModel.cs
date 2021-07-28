@@ -28,5 +28,9 @@ namespace BankDatabaseAccess.EntityModel
         /// This is person National ID number. Value can not be null.
         /// </summary>
         public string Nid { get; set; }
+        /// <summary>
+        /// This is person Address. Value cant be null.
+        /// </summary>
+        public string Address { get; set; }
     }
 }

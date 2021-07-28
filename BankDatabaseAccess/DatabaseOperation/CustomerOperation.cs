@@ -13,12 +13,13 @@ namespace BankDatabaseAccess.DatabaseOperation
         public int Insert(PersonModel personModel)
         {
             decimal initialBalance = 1000;
-            var query = @"INSERT INTO dbo.[dbo.Customers](Username,Password,Email,Phone,Nid,Balance) 
+            var query = @"INSERT INTO dbo.[dbo.Customers](Username,Password,Email,Phone,Nid,Address,Balance) 
                           VALUES ('" + personModel.Username + "'," +
                           "'" + personModel.Password + "'," +
                           "'" + personModel.Eamil + "'," +
                           "'" + personModel.Phone + "'," +
                           "'" + personModel.Nid + "'," +
+                          "'" + personModel.Address + "'," +
                           "'" + initialBalance + "')"; // generates Opening Balance from 500 to 1k
             return DatabaseConnection.Execute(query);
         }

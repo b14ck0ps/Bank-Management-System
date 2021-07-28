@@ -90,7 +90,8 @@ namespace BankManagementSystem
                 Password = PasswordTextbox.Text,
                 Eamil = EmailTextbox.Text,
                 Phone = PhoneTextBox.Text,
-                Nid = Nidtextbox.Text
+                Nid = Nidtextbox.Text,
+                Address = AddressTextbox.Text
             };
             if (UILogics.IsEmployee())
                 UpdatedDB(new EmployeeOperations().Insert(User));

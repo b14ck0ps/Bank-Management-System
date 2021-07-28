@@ -23,6 +23,7 @@ namespace BankManagementSystem.Dashboard_Forms
             NameLbl.Text = $"Username : { data.Rows[0][0] }";
             NidLbl.Text = $"NID       : { data.Rows[0][4] }";
             PhoneLbl.Text = $"Phone   : { data.Rows[0][3] }";
+            AddressLbl.Text = $"Address   : { data.Rows[0][6] }";
             BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
         }
     }
