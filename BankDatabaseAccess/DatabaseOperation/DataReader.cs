@@ -5,7 +5,7 @@ namespace BankDatabaseAccess.DatabaseOperation
 {
     public class DataReader
     {
-        private string query;
+        private string query = "--";
         private  DataTable DataTable()
         {
             SqlDataAdapter adapter = new SqlDataAdapter(query, DatabaseConnection.Connection);
@@ -22,39 +22,42 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// <returns>This return a datatable of the given object from the database</returns>
         public DataTable GetSingleData(EntityModel.PersonModel personModel,bool customer,bool employee)
         {
-            if (customer)
-            {
-                query = @"SELECT * 
-                        FROM dbo.[dbo.Customers] 
-                        WHERE Username = '" + personModel.Username + "'";
-            }
-            if (employee)
-            {
-                query = @"SELECT * 
-                        FROM dbo.[dbo.Employee] 
-                        WHERE Username = '" + personModel.Username + "'";
-            }
+            query = @"SELECT * 
+                        FROM dbo.[dbo."+ Table(customer,employee) +"] " +
+                        "WHERE Username =  '"+ personModel.Username +"'";
             return DataTable();
         }
         /// <summary>
-        /// This method read the whole data from a table
+        /// This method read the whole data from a table exept Passwords
         /// </summary>
         /// <param name="customer">Set True if Customer data table needed</param>
         /// <param name="employee">Set True id Employee data needed</param>
         /// <returns>Return all Coloumns and rows from the table</returns>
         public DataTable GetAllData(bool customer = false, bool employee = false)
         {
-            if (customer)
-            {
-                query = @"SELECT * 
-                      FROM dbo.[dbo.Customers]";
-            }
-            if (employee)
-            {
-                query = @"SELECT * 
-                      FROM dbo.[dbo.Employee]";
-            }
+                query = @"SELECT 
+                            [Username]
+                            ,[Email]
+                            ,[Phone]
+                            ,[Nid]
+                            ,[Balance]
+                            ,[Address]
+                        FROM dbo.[dbo."+ Table(customer,employee) +"]";
             return DataTable();
+        }
+        /// <summary>
+        /// This declare from which table data will be read
+        /// </summary>
+        /// <param name="customer">True if customer table needed</param>
+        /// <param name="employee">True if employee table needed</param>
+        /// <returns>Return The Table name as a string</returns>
+        private string Table(bool customer, bool employee)
+        {
+            if (customer)
+                return "Customers";
+            if (employee)
+                return "Employee";
+            return null;
         }
     }
 }
