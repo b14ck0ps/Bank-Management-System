@@ -10,7 +10,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             InitializeComponent();
             CustomerdataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             CustomerdataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            CustomerdataGridView.DataSource = new DataReader().GetAllData(true);
+            CustomerdataGridView.DataSource = new DataReader().GetAllData(customer: true);
         }
     }
 }
