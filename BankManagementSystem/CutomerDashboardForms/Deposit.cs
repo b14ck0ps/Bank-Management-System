@@ -50,7 +50,7 @@ namespace BankManagementSystem.Dashboard_Forms
         private decimal GetBalance()
         {
             DataTable data;
-            data = new DataReader().GetData(customer, UILogics.IsCustomer(), UILogics.IsEmployee());
+            data = new DataReader().GetSingleData(customer, UILogics.IsCustomer(), UILogics.IsEmployee());
             return (decimal)(data.Rows[0][5]);
         }
         #region place holder

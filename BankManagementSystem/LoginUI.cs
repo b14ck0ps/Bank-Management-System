@@ -60,7 +60,7 @@ namespace BankManagementSystem
                 };
                 try
                 {
-                     data = new DataReader().GetData(customerModel, UILogics.IsCustomer(), UILogics.IsEmployee());
+                     data = new DataReader().GetSingleData(customerModel, UILogics.IsCustomer(), UILogics.IsEmployee());
                      username = data.Rows[0][0].ToString();
                      password = data.Rows[0][1].ToString();
                     if (Authentication(username, password))
@@ -90,7 +90,7 @@ namespace BankManagementSystem
                 };
                 try
                 {
-                    data = new DataReader().GetData(EmployeeModel, UILogics.IsCustomer(), UILogics.IsEmployee());
+                    data = new DataReader().GetSingleData(EmployeeModel, UILogics.IsCustomer(), UILogics.IsEmployee());
                     username = data.Rows[0][0].ToString();
                     password = data.Rows[0][1].ToString();
                     if (Authentication(username, password))

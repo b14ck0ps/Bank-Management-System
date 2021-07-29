@@ -44,7 +44,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
         private void UpdateUi()
         {
             DataTable data;
-            data = new DataReader().GetData(employee, UILogics.IsCustomer(), UILogics.IsEmployee());
+            data = new DataReader().GetSingleData(employee, UILogics.IsCustomer(), UILogics.IsEmployee());
             WelcomeLbl.Text = $"Welcome  { data.Rows[0][0] }";
             _usenameLbl.Text = data.Rows[0][0].ToString();
             _NIDLbl.Text = data.Rows[0][4].ToString();

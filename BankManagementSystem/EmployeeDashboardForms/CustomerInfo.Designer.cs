@@ -35,11 +35,14 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // CustomerdataGridView
             // 
+            this.CustomerdataGridView.AllowUserToAddRows = false;
+            this.CustomerdataGridView.AllowUserToDeleteRows = false;
             this.CustomerdataGridView.BackgroundColor = System.Drawing.Color.White;
             this.CustomerdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CustomerdataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CustomerdataGridView.Location = new System.Drawing.Point(0, 0);
             this.CustomerdataGridView.Name = "CustomerdataGridView";
+            this.CustomerdataGridView.ReadOnly = true;
             this.CustomerdataGridView.Size = new System.Drawing.Size(690, 390);
             this.CustomerdataGridView.TabIndex = 0;
             // 
