@@ -6,7 +6,7 @@ namespace BankDatabaseAccess.DatabaseOperation
     
     public class CustomerOperation : IOperations , ITransaction
     {
-        private const decimal InitialBalance = 1000;
+        private const decimal InitialBalance = 100;
         /// <summary>
         /// This method is use for Customers Registration Purpose.
         /// </summary>

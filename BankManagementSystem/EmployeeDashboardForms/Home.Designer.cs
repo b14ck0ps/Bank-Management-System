@@ -50,6 +50,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.DescriptionLbl = new System.Windows.Forms.Label();
             this.WelcomeLbl = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this.SalaryLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.infoPanel.SuspendLayout();
             this.SuspendLayout();
@@ -307,12 +308,25 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.infoPanel.Size = new System.Drawing.Size(543, 233);
             this.infoPanel.TabIndex = 19;
             // 
+            // SalaryLbl
+            // 
+            this.SalaryLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SalaryLbl.AutoSize = true;
+            this.SalaryLbl.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalaryLbl.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.SalaryLbl.Location = new System.Drawing.Point(518, 37);
+            this.SalaryLbl.Name = "SalaryLbl";
+            this.SalaryLbl.Size = new System.Drawing.Size(143, 25);
+            this.SalaryLbl.TabIndex = 23;
+            this.SalaryLbl.Text = "Salary <Salary>";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 390);
+            this.Controls.Add(this.SalaryLbl);
             this.Controls.Add(this.EditLnk);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UpdateBtn);
@@ -357,5 +371,6 @@ namespace BankManagementSystem.EmployeeDashboardForms
         private System.Windows.Forms.Label DescriptionLbl;
         private System.Windows.Forms.Label WelcomeLbl;
         private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.Label SalaryLbl;
     }
 }

@@ -27,7 +27,7 @@ namespace BankManagementSystem.Dashboard_Forms
             _addressLbl.Text = data.Rows[0][6].ToString();
             _eamilLbl.Text = data.Rows[0][2].ToString();
             _joinDateLbl.Text = data.Rows[0][7].ToString();
-            BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
+            BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } $";
         }
 
         private void EditLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

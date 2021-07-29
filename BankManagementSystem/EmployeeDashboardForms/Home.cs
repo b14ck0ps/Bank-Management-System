@@ -46,6 +46,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             DataTable data;
             data = new DataReader().GetSingleData(employee, UILogics.IsCustomer(), UILogics.IsEmployee());
             WelcomeLbl.Text = $"Welcome  { data.Rows[0][0] }";
+            SalaryLbl.Text = $"Salary : { data.Rows[0][5] } $";
             _FullnameLbl.Text = data.Rows[0][1].ToString();
             _NIDLbl.Text = data.Rows[0][4].ToString();
             _phoneLbl.Text = data.Rows[0][3].ToString();
