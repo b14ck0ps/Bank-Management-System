@@ -8,6 +8,8 @@ namespace BankManagementSystem.EmployeeDashboardForms
         public CustomerInfo()
         {
             InitializeComponent();
+            CustomerdataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            CustomerdataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             CustomerdataGridView.DataSource = new DataReader().GetAllData(true);
         }
     }
