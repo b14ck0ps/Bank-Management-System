@@ -64,7 +64,8 @@ namespace BankDatabaseAccess.DatabaseOperation
                         "Email = '" + personModel.Eamil + "'," +
                         "Phone = '" + personModel.Phone + "'," +
                         "Address = '" + personModel.Address + "'," +
-                        "Nid = '" + personModel.Nid + "'";
+                        "Nid = '" + personModel.Nid + "'" +
+                        "WHERE Username = '"+ personModel.Username +"'";
             return DatabaseConnection.Execute(query);
         }
     }
