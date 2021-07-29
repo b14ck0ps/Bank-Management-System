@@ -38,6 +38,7 @@ namespace BankManagementSystem
             this.PhoneTextBox = new System.Windows.Forms.TextBox();
             this.AddressTextbox = new System.Windows.Forms.TextBox();
             this.Nidtextbox = new System.Windows.Forms.TextBox();
+            this.FullNametextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace BankManagementSystem
             // 
             this.PasswordTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.PasswordTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.PasswordTextbox.Location = new System.Drawing.Point(51, 239);
+            this.PasswordTextbox.Location = new System.Drawing.Point(51, 270);
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.Size = new System.Drawing.Size(286, 32);
             this.PasswordTextbox.TabIndex = 1;
@@ -68,7 +69,7 @@ namespace BankManagementSystem
             // RegistrationBtn
             // 
             this.RegistrationBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistrationBtn.Location = new System.Drawing.Point(126, 488);
+            this.RegistrationBtn.Location = new System.Drawing.Point(134, 460);
             this.RegistrationBtn.Name = "RegistrationBtn";
             this.RegistrationBtn.Size = new System.Drawing.Size(109, 39);
             this.RegistrationBtn.TabIndex = 2;
@@ -102,7 +103,7 @@ namespace BankManagementSystem
             // 
             this.EmailTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.EmailTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.EmailTextbox.Location = new System.Drawing.Point(51, 287);
+            this.EmailTextbox.Location = new System.Drawing.Point(51, 308);
             this.EmailTextbox.Name = "EmailTextbox";
             this.EmailTextbox.Size = new System.Drawing.Size(286, 32);
             this.EmailTextbox.TabIndex = 5;
@@ -114,7 +115,7 @@ namespace BankManagementSystem
             // 
             this.PhoneTextBox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.PhoneTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.PhoneTextBox.Location = new System.Drawing.Point(51, 336);
+            this.PhoneTextBox.Location = new System.Drawing.Point(51, 346);
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(286, 32);
             this.PhoneTextBox.TabIndex = 6;
@@ -126,7 +127,7 @@ namespace BankManagementSystem
             // 
             this.AddressTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.AddressTextbox.Location = new System.Drawing.Point(51, 383);
+            this.AddressTextbox.Location = new System.Drawing.Point(51, 384);
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.Size = new System.Drawing.Size(286, 32);
             this.AddressTextbox.TabIndex = 7;
@@ -138,7 +139,7 @@ namespace BankManagementSystem
             // 
             this.Nidtextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Nidtextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.Nidtextbox.Location = new System.Drawing.Point(51, 432);
+            this.Nidtextbox.Location = new System.Drawing.Point(51, 422);
             this.Nidtextbox.Name = "Nidtextbox";
             this.Nidtextbox.Size = new System.Drawing.Size(286, 32);
             this.Nidtextbox.TabIndex = 8;
@@ -146,12 +147,25 @@ namespace BankManagementSystem
             this.Nidtextbox.Enter += new System.EventHandler(this.Nidtextbox_Enter);
             this.Nidtextbox.Leave += new System.EventHandler(this.Nidtextbox_Leave);
             // 
+            // FullNametextBox
+            // 
+            this.FullNametextBox.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.FullNametextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.FullNametextBox.Location = new System.Drawing.Point(51, 232);
+            this.FullNametextBox.Name = "FullNametextBox";
+            this.FullNametextBox.Size = new System.Drawing.Size(286, 32);
+            this.FullNametextBox.TabIndex = 9;
+            this.FullNametextBox.Text = "Enter Your Full Name";
+            this.FullNametextBox.Enter += new System.EventHandler(this.FullNametextBox_Enter);
+            this.FullNametextBox.Leave += new System.EventHandler(this.FullNametextBox_Leave);
+            // 
             // RegistrationUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(396, 605);
+            this.Controls.Add(this.FullNametextBox);
             this.Controls.Add(this.Nidtextbox);
             this.Controls.Add(this.AddressTextbox);
             this.Controls.Add(this.PhoneTextBox);
@@ -187,6 +201,7 @@ namespace BankManagementSystem
         private System.Windows.Forms.TextBox PhoneTextBox;
         private System.Windows.Forms.TextBox AddressTextbox;
         private System.Windows.Forms.TextBox Nidtextbox;
+        private System.Windows.Forms.TextBox FullNametextBox;
     }
 }
 

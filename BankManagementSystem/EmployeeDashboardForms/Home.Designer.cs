@@ -45,8 +45,8 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this._phoneLbl = new System.Windows.Forms.Label();
             this._addressLbl = new System.Windows.Forms.Label();
             this._NIDLbl = new System.Windows.Forms.Label();
-            this._usenameLbl = new System.Windows.Forms.Label();
-            this.NameLbl = new System.Windows.Forms.Label();
+            this._FullnameLbl = new System.Windows.Forms.Label();
+            this.FullNameLbl = new System.Windows.Forms.Label();
             this.DescriptionLbl = new System.Windows.Forms.Label();
             this.WelcomeLbl = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
@@ -73,7 +73,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::BankManagementSystem.Properties.Resources.dpHolder;
-            this.pictureBox1.Location = new System.Drawing.Point(572, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(578, 121);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 107);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,11 +101,11 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.notChangeableLbl.AutoSize = true;
             this.notChangeableLbl.Font = new System.Drawing.Font("Segoe UI Light", 10.25F);
             this.notChangeableLbl.ForeColor = System.Drawing.Color.DarkGray;
-            this.notChangeableLbl.Location = new System.Drawing.Point(345, 16);
+            this.notChangeableLbl.Location = new System.Drawing.Point(352, 16);
             this.notChangeableLbl.Name = "notChangeableLbl";
-            this.notChangeableLbl.Size = new System.Drawing.Size(193, 19);
+            this.notChangeableLbl.Size = new System.Drawing.Size(172, 19);
             this.notChangeableLbl.TabIndex = 13;
-            this.notChangeableLbl.Text = "You can\'t change the username.";
+            this.notChangeableLbl.Text = "You can\'t change the Name.";
             this.notChangeableLbl.Visible = false;
             // 
             // PhoneTextBox
@@ -236,29 +236,29 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this._NIDLbl.TabIndex = 12;
             this._NIDLbl.Text = "<nid>";
             // 
-            // _usenameLbl
+            // _FullnameLbl
             // 
-            this._usenameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this._usenameLbl.AutoSize = true;
-            this._usenameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._usenameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._usenameLbl.Location = new System.Drawing.Point(122, 16);
-            this._usenameLbl.Name = "_usenameLbl";
-            this._usenameLbl.Size = new System.Drawing.Size(114, 25);
-            this._usenameLbl.TabIndex = 11;
-            this._usenameLbl.Text = "<username>";
+            this._FullnameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._FullnameLbl.AutoSize = true;
+            this._FullnameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._FullnameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._FullnameLbl.Location = new System.Drawing.Point(122, 16);
+            this._FullnameLbl.Name = "_FullnameLbl";
+            this._FullnameLbl.Size = new System.Drawing.Size(113, 25);
+            this._FullnameLbl.TabIndex = 11;
+            this._FullnameLbl.Text = "<Full name>";
             // 
-            // NameLbl
+            // FullNameLbl
             // 
-            this.NameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NameLbl.AutoSize = true;
-            this.NameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.NameLbl.Location = new System.Drawing.Point(41, 138);
-            this.NameLbl.Name = "NameLbl";
-            this.NameLbl.Size = new System.Drawing.Size(106, 25);
-            this.NameLbl.TabIndex = 15;
-            this.NameLbl.Text = "Username : ";
+            this.FullNameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FullNameLbl.AutoSize = true;
+            this.FullNameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FullNameLbl.Location = new System.Drawing.Point(41, 138);
+            this.FullNameLbl.Name = "FullNameLbl";
+            this.FullNameLbl.Size = new System.Drawing.Size(106, 25);
+            this.FullNameLbl.TabIndex = 15;
+            this.FullNameLbl.Text = "Full Name : ";
             // 
             // DescriptionLbl
             // 
@@ -301,7 +301,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.infoPanel.Controls.Add(this._addressLbl);
             this.infoPanel.Controls.Add(this._NIDLbl);
             this.infoPanel.Controls.Add(this.PhoneLbl);
-            this.infoPanel.Controls.Add(this._usenameLbl);
+            this.infoPanel.Controls.Add(this._FullnameLbl);
             this.infoPanel.Location = new System.Drawing.Point(23, 121);
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Size = new System.Drawing.Size(543, 233);
@@ -317,7 +317,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.NidLbl);
-            this.Controls.Add(this.NameLbl);
+            this.Controls.Add(this.FullNameLbl);
             this.Controls.Add(this.DescriptionLbl);
             this.Controls.Add(this.WelcomeLbl);
             this.Controls.Add(this.infoPanel);
@@ -352,8 +352,8 @@ namespace BankManagementSystem.EmployeeDashboardForms
         private System.Windows.Forms.Label _phoneLbl;
         private System.Windows.Forms.Label _addressLbl;
         private System.Windows.Forms.Label _NIDLbl;
-        private System.Windows.Forms.Label _usenameLbl;
-        private System.Windows.Forms.Label NameLbl;
+        private System.Windows.Forms.Label _FullnameLbl;
+        private System.Windows.Forms.Label FullNameLbl;
         private System.Windows.Forms.Label DescriptionLbl;
         private System.Windows.Forms.Label WelcomeLbl;
         private System.Windows.Forms.Panel infoPanel;

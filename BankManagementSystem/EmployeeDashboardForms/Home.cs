@@ -28,7 +28,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             Visibility(false);
             EditLnk.Visible = true;
 
-            PersonModel personModel = new CustomerModel()
+            PersonModel personModel = new EmployeeModel()
             {
                 Username = employee.Username,
                 Nid = NidTextbox.Text,
@@ -46,7 +46,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             DataTable data;
             data = new DataReader().GetSingleData(employee, UILogics.IsCustomer(), UILogics.IsEmployee());
             WelcomeLbl.Text = $"Welcome  { data.Rows[0][0] }";
-            _usenameLbl.Text = data.Rows[0][0].ToString();
+            _FullnameLbl.Text = data.Rows[0][1].ToString();
             _NIDLbl.Text = data.Rows[0][4].ToString();
             _phoneLbl.Text = data.Rows[0][3].ToString();
             _addressLbl.Text = data.Rows[0][6].ToString();

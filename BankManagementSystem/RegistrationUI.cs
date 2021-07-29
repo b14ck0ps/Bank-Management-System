@@ -31,7 +31,15 @@ namespace BankManagementSystem
         {
             UILogics.LeaveUpdate(textBox: UsernameTextbox, placeholder: "Enter a Username");
         }
+        private void FullNametextBox_Enter(object sender, EventArgs e)
+        {
+            UILogics.EnterUpdate(textBox: FullNametextBox, placeholder: "Enter Your Full Name");
+        }
 
+        private void FullNametextBox_Leave(object sender, EventArgs e)
+        {
+            UILogics.LeaveUpdate(textBox: FullNametextBox, placeholder: "Enter Your Full Name");
+        }
         private void PasswordTextbox_Enter(object sender, EventArgs e)
         {
             UILogics.EnterUpdate(textBox: PasswordTextbox, placeholder: "Enter a Password");
@@ -84,9 +92,10 @@ namespace BankManagementSystem
         #endregion
         private void RegistrationBtn_Click(object sender, EventArgs e)
         {
-            PersonModel User = new EmployeeModel
+            PersonModel User = new CustomerModel
             {
                 Username = UsernameTextbox.Text,
+                FullName = FullNametextBox.Text,
                 Password = PasswordTextbox.Text,
                 Eamil = EmailTextbox.Text,
                 Phone = PhoneTextBox.Text,

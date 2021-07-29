@@ -47,11 +47,13 @@ namespace BankManagementSystem.Dashboard_Forms
             this._phoneLbl = new System.Windows.Forms.Label();
             this._addressLbl = new System.Windows.Forms.Label();
             this._NIDLbl = new System.Windows.Forms.Label();
-            this._usenameLbl = new System.Windows.Forms.Label();
+            this._FullnameLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.EditLnk = new System.Windows.Forms.LinkLabel();
             this.UpdateBtn = new System.Windows.Forms.Button();
+            this.JoinDateLbl = new System.Windows.Forms.Label();
+            this._joinDateLbl = new System.Windows.Forms.Label();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,11 +89,11 @@ namespace BankManagementSystem.Dashboard_Forms
             this.NameLbl.AutoSize = true;
             this.NameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.NameLbl.Location = new System.Drawing.Point(47, 126);
+            this.NameLbl.Location = new System.Drawing.Point(21, 16);
             this.NameLbl.Name = "NameLbl";
             this.NameLbl.Size = new System.Drawing.Size(106, 25);
             this.NameLbl.TabIndex = 2;
-            this.NameLbl.Text = "Username : ";
+            this.NameLbl.Text = "Full Name : ";
             // 
             // NidLbl
             // 
@@ -99,7 +101,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.NidLbl.AutoSize = true;
             this.NidLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NidLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.NidLbl.Location = new System.Drawing.Point(47, 162);
+            this.NidLbl.Location = new System.Drawing.Point(21, 49);
             this.NidLbl.Name = "NidLbl";
             this.NidLbl.Size = new System.Drawing.Size(106, 25);
             this.NidLbl.TabIndex = 3;
@@ -111,7 +113,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.AddressLbl.AutoSize = true;
             this.AddressLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddressLbl.Location = new System.Drawing.Point(17, 96);
+            this.AddressLbl.Location = new System.Drawing.Point(19, 91);
             this.AddressLbl.Name = "AddressLbl";
             this.AddressLbl.Size = new System.Drawing.Size(105, 25);
             this.AddressLbl.TabIndex = 4;
@@ -123,7 +125,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.PhoneLbl.AutoSize = true;
             this.PhoneLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PhoneLbl.Location = new System.Drawing.Point(18, 177);
+            this.PhoneLbl.Location = new System.Drawing.Point(21, 174);
             this.PhoneLbl.Name = "PhoneLbl";
             this.PhoneLbl.Size = new System.Drawing.Size(102, 25);
             this.PhoneLbl.TabIndex = 5;
@@ -146,8 +148,12 @@ namespace BankManagementSystem.Dashboard_Forms
             this.infoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.infoPanel.BackColor = System.Drawing.Color.White;
             this.infoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.infoPanel.Controls.Add(this._joinDateLbl);
+            this.infoPanel.Controls.Add(this.JoinDateLbl);
             this.infoPanel.Controls.Add(this.notChangeableLbl);
             this.infoPanel.Controls.Add(this.PhoneTextBox);
+            this.infoPanel.Controls.Add(this.NameLbl);
+            this.infoPanel.Controls.Add(this.NidLbl);
             this.infoPanel.Controls.Add(this.EmailtextBox);
             this.infoPanel.Controls.Add(this.AddresstextBox);
             this.infoPanel.Controls.Add(this.NidTextbox);
@@ -158,10 +164,10 @@ namespace BankManagementSystem.Dashboard_Forms
             this.infoPanel.Controls.Add(this._addressLbl);
             this.infoPanel.Controls.Add(this._NIDLbl);
             this.infoPanel.Controls.Add(this.PhoneLbl);
-            this.infoPanel.Controls.Add(this._usenameLbl);
+            this.infoPanel.Controls.Add(this._FullnameLbl);
             this.infoPanel.Location = new System.Drawing.Point(29, 109);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(543, 233);
+            this.infoPanel.Size = new System.Drawing.Size(543, 248);
             this.infoPanel.TabIndex = 9;
             // 
             // notChangeableLbl
@@ -170,7 +176,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.notChangeableLbl.AutoSize = true;
             this.notChangeableLbl.Font = new System.Drawing.Font("Segoe UI Light", 10.25F);
             this.notChangeableLbl.ForeColor = System.Drawing.Color.DarkGray;
-            this.notChangeableLbl.Location = new System.Drawing.Point(345, 16);
+            this.notChangeableLbl.Location = new System.Drawing.Point(345, 11);
             this.notChangeableLbl.Name = "notChangeableLbl";
             this.notChangeableLbl.Size = new System.Drawing.Size(193, 19);
             this.notChangeableLbl.TabIndex = 13;
@@ -179,7 +185,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // PhoneTextBox
             // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(349, 174);
+            this.PhoneTextBox.Location = new System.Drawing.Point(349, 171);
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(189, 33);
             this.PhoneTextBox.TabIndex = 21;
@@ -187,7 +193,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // EmailtextBox
             // 
-            this.EmailtextBox.Location = new System.Drawing.Point(349, 137);
+            this.EmailtextBox.Location = new System.Drawing.Point(349, 132);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(189, 33);
             this.EmailtextBox.TabIndex = 20;
@@ -195,7 +201,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // AddresstextBox
             // 
-            this.AddresstextBox.Location = new System.Drawing.Point(349, 93);
+            this.AddresstextBox.Location = new System.Drawing.Point(349, 88);
             this.AddresstextBox.Name = "AddresstextBox";
             this.AddresstextBox.Size = new System.Drawing.Size(189, 33);
             this.AddresstextBox.TabIndex = 19;
@@ -203,7 +209,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // NidTextbox
             // 
-            this.NidTextbox.Location = new System.Drawing.Point(349, 49);
+            this.NidTextbox.Location = new System.Drawing.Point(349, 46);
             this.NidTextbox.Name = "NidTextbox";
             this.NidTextbox.Size = new System.Drawing.Size(189, 33);
             this.NidTextbox.TabIndex = 18;
@@ -215,7 +221,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this._eamilLbl.AutoSize = true;
             this._eamilLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._eamilLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._eamilLbl.Location = new System.Drawing.Point(124, 140);
+            this._eamilLbl.Location = new System.Drawing.Point(124, 135);
             this._eamilLbl.Name = "_eamilLbl";
             this._eamilLbl.Size = new System.Drawing.Size(79, 25);
             this._eamilLbl.TabIndex = 16;
@@ -227,7 +233,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.emailLbl.Location = new System.Drawing.Point(17, 140);
+            this.emailLbl.Location = new System.Drawing.Point(19, 135);
             this.emailLbl.Name = "emailLbl";
             this.emailLbl.Size = new System.Drawing.Size(104, 25);
             this.emailLbl.TabIndex = 15;
@@ -239,7 +245,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this._phoneLbl.AutoSize = true;
             this._phoneLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._phoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._phoneLbl.Location = new System.Drawing.Point(124, 177);
+            this._phoneLbl.Location = new System.Drawing.Point(124, 174);
             this._phoneLbl.Name = "_phoneLbl";
             this._phoneLbl.Size = new System.Drawing.Size(88, 25);
             this._phoneLbl.TabIndex = 14;
@@ -251,7 +257,7 @@ namespace BankManagementSystem.Dashboard_Forms
             this._addressLbl.AutoSize = true;
             this._addressLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._addressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._addressLbl.Location = new System.Drawing.Point(124, 96);
+            this._addressLbl.Location = new System.Drawing.Point(124, 91);
             this._addressLbl.Name = "_addressLbl";
             this._addressLbl.Size = new System.Drawing.Size(97, 25);
             this._addressLbl.TabIndex = 13;
@@ -263,23 +269,23 @@ namespace BankManagementSystem.Dashboard_Forms
             this._NIDLbl.AutoSize = true;
             this._NIDLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._NIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._NIDLbl.Location = new System.Drawing.Point(124, 52);
+            this._NIDLbl.Location = new System.Drawing.Point(124, 49);
             this._NIDLbl.Name = "_NIDLbl";
             this._NIDLbl.Size = new System.Drawing.Size(61, 25);
             this._NIDLbl.TabIndex = 12;
             this._NIDLbl.Text = "<nid>";
             // 
-            // _usenameLbl
+            // _FullnameLbl
             // 
-            this._usenameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this._usenameLbl.AutoSize = true;
-            this._usenameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._usenameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._usenameLbl.Location = new System.Drawing.Point(122, 16);
-            this._usenameLbl.Name = "_usenameLbl";
-            this._usenameLbl.Size = new System.Drawing.Size(114, 25);
-            this._usenameLbl.TabIndex = 11;
-            this._usenameLbl.Text = "<username>";
+            this._FullnameLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._FullnameLbl.AutoSize = true;
+            this._FullnameLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._FullnameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._FullnameLbl.Location = new System.Drawing.Point(124, 16);
+            this._FullnameLbl.Name = "_FullnameLbl";
+            this._FullnameLbl.Size = new System.Drawing.Size(116, 25);
+            this._FullnameLbl.TabIndex = 11;
+            this._FullnameLbl.Text = "<Full Name>";
             // 
             // pictureBox1
             // 
@@ -333,6 +339,30 @@ namespace BankManagementSystem.Dashboard_Forms
             this.UpdateBtn.Visible = false;
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
+            // JoinDateLbl
+            // 
+            this.JoinDateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.JoinDateLbl.AutoSize = true;
+            this.JoinDateLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JoinDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JoinDateLbl.Location = new System.Drawing.Point(17, 210);
+            this.JoinDateLbl.Name = "JoinDateLbl";
+            this.JoinDateLbl.Size = new System.Drawing.Size(100, 25);
+            this.JoinDateLbl.TabIndex = 22;
+            this.JoinDateLbl.Text = "Join Date  :";
+            // 
+            // _joinDateLbl
+            // 
+            this._joinDateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._joinDateLbl.AutoSize = true;
+            this._joinDateLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._joinDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._joinDateLbl.Location = new System.Drawing.Point(124, 210);
+            this._joinDateLbl.Name = "_joinDateLbl";
+            this._joinDateLbl.Size = new System.Drawing.Size(103, 25);
+            this._joinDateLbl.TabIndex = 23;
+            this._joinDateLbl.Text = "<Joindate>";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -343,8 +373,6 @@ namespace BankManagementSystem.Dashboard_Forms
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BalanceLbl);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.NidLbl);
-            this.Controls.Add(this.NameLbl);
             this.Controls.Add(this.DescriptionLbl);
             this.Controls.Add(this.WelcomeLbl);
             this.Controls.Add(this.infoPanel);
@@ -379,7 +407,7 @@ namespace BankManagementSystem.Dashboard_Forms
         private System.Windows.Forms.Label _phoneLbl;
         private System.Windows.Forms.Label _addressLbl;
         private System.Windows.Forms.Label _NIDLbl;
-        private System.Windows.Forms.Label _usenameLbl;
+        private System.Windows.Forms.Label _FullnameLbl;
         private System.Windows.Forms.Label _eamilLbl;
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.LinkLabel EditLnk;
@@ -389,5 +417,7 @@ namespace BankManagementSystem.Dashboard_Forms
         private System.Windows.Forms.TextBox NidTextbox;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Label notChangeableLbl;
+        private System.Windows.Forms.Label _joinDateLbl;
+        private System.Windows.Forms.Label JoinDateLbl;
     }
 }

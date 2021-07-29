@@ -14,8 +14,9 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// <returns>Return Row Number</returns>
         public int Insert(PersonModel personModel)
         {
-            var query = @"INSERT INTO dbo.[dbo.Customers](Username,Password,Email,Phone,Nid,Address,Balance) 
+            var query = @"INSERT INTO dbo.[dbo.Customers](Username,Fullname,Password,Email,Phone,Nid,Address,Balance) 
                           VALUES ('" + personModel.Username + "'," +
+                          "'" + personModel.FullName + "'," +
                           "'" + personModel.Password + "'," +
                           "'" + personModel.Eamil + "'," +
                           "'" + personModel.Phone + "'," +
@@ -35,7 +36,8 @@ namespace BankDatabaseAccess.DatabaseOperation
         public int Update(PersonModel personModel)
         {
             var query = @"UPDATE dbo.[dbo.Customers] SET 
-                        Email = '" + personModel.Eamil + "'," +
+                        FullName = '" + personModel.FullName + "'," +
+                         "Email = '" + personModel.Eamil + "'," +
                          "Phone = '" + personModel.Phone + "'," +
                          "Nid = '" + personModel.Nid + "'," +
                          "Address = '" + personModel.Address + "'" +

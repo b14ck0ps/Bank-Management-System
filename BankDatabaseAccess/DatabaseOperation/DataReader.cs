@@ -36,13 +36,14 @@ namespace BankDatabaseAccess.DatabaseOperation
         public DataTable GetAllData(bool customer = false, bool employee = false)
         {
                 query = @"SELECT 
-                            [Username]
+                             [FullName]
                             ,[Email]
                             ,[Phone]
                             ,[Nid]
                             ,[Balance]
                             ,[Address]
-                        FROM dbo.[dbo."+ Table(customer,employee) +"]";
+                            ,[JoinDate]
+                        FROM dbo.[dbo." + Table(customer,employee) +"]";
             return DataTable();
         }
         /// <summary>

@@ -21,11 +21,12 @@ namespace BankManagementSystem.Dashboard_Forms
             DataTable data;
             data = new DataReader().GetSingleData(customer, UILogics.IsCustomer(), UILogics.IsEmployee());
             WelcomeLbl.Text = $"Welcome  { data.Rows[0][0] }";
-            _usenameLbl.Text = data.Rows[0][0].ToString();
+            _FullnameLbl.Text = data.Rows[0][1].ToString();
             _NIDLbl.Text = data.Rows[0][4].ToString();
             _phoneLbl.Text = data.Rows[0][3].ToString();
             _addressLbl.Text = data.Rows[0][6].ToString();
             _eamilLbl.Text = data.Rows[0][2].ToString();
+            _joinDateLbl.Text = data.Rows[0][7].ToString();
             BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } Taka";
         }
 

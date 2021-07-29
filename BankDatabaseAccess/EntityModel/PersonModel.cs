@@ -13,6 +13,10 @@ namespace BankDatabaseAccess.EntityModel
         /// </summary>
         public string Username { get; set; }
         /// <summary>
+        /// This is the person Full name. Valu can not be null.
+        /// </summary>
+        public string FullName { get; set; }
+        /// <summary>
         /// This is the Person Password. Value can not be null.
         /// </summary>
         public string Password { get; set; }
