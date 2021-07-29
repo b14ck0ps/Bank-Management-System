@@ -3,8 +3,10 @@ using System;
 
 namespace BankDatabaseAccess.DatabaseOperation
 {
+    
     public class CustomerOperation : IOperations , ITransaction
     {
+        private const decimal InitialBalance = 1000;
         /// <summary>
         /// This method is use for Customers Registration Purpose.
         /// </summary>
@@ -12,7 +14,6 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// <returns>Return Row Number</returns>
         public int Insert(PersonModel personModel)
         {
-            decimal initialBalance = 1000;
             var query = @"INSERT INTO dbo.[dbo.Customers](Username,Password,Email,Phone,Nid,Address,Balance) 
                           VALUES ('" + personModel.Username + "'," +
                           "'" + personModel.Password + "'," +
@@ -20,7 +21,7 @@ namespace BankDatabaseAccess.DatabaseOperation
                           "'" + personModel.Phone + "'," +
                           "'" + personModel.Nid + "'," +
                           "'" + personModel.Address + "'," +
-                          "'" + initialBalance + "')"; // generates Opening Balance from 500 to 1k
+                          "'" + InitialBalance + "')"; // Set Opening Balance 1000 taka for all customers
             return DatabaseConnection.Execute(query);
         }
 
