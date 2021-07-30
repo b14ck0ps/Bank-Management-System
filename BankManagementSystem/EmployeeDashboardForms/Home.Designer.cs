@@ -111,6 +111,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // PhoneTextBox
             // 
+            this.PhoneTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.PhoneTextBox.Location = new System.Drawing.Point(349, 174);
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(189, 33);
@@ -119,6 +120,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // EmailtextBox
             // 
+            this.EmailtextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.EmailtextBox.Location = new System.Drawing.Point(349, 137);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(189, 33);
@@ -127,6 +129,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // AddresstextBox
             // 
+            this.AddresstextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.AddresstextBox.Location = new System.Drawing.Point(349, 93);
             this.AddresstextBox.Name = "AddresstextBox";
             this.AddresstextBox.Size = new System.Drawing.Size(189, 33);
@@ -171,6 +174,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             // NidTextbox
             // 
+            this.NidTextbox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.NidTextbox.Location = new System.Drawing.Point(349, 49);
             this.NidTextbox.Name = "NidTextbox";
             this.NidTextbox.Size = new System.Drawing.Size(189, 33);

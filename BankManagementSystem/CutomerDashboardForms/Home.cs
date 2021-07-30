@@ -1,8 +1,10 @@
 ﻿using BankDatabaseAccess;
 using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
+using System;
 using System.Data;
 using System.Windows.Forms;
+using static BankDatabaseAccess.DatabaseConnection;
 
 namespace BankManagementSystem.Dashboard_Forms
 {
@@ -32,7 +34,7 @@ namespace BankManagementSystem.Dashboard_Forms
 
         private void EditLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Visibility(true);
+            FillTextBox();
             EditLnk.Visible = false;
         }
         private void UpdateBtn_Click(object sender, System.EventArgs e)
@@ -60,6 +62,25 @@ namespace BankManagementSystem.Dashboard_Forms
             EmailtextBox.Visible = @bool;
             PhoneTextBox.Visible = @bool;
             UpdateBtn.Visible = @bool;
+        }
+
+        private void FillTextBox()
+        {
+            try
+            {
+                DataTable data;
+                data = new DataReader().GetSingleData(customer, UILogics.IsCustomer(), UILogics.IsEmployee());
+                EmailtextBox.Text = data.Rows[0][2].ToString();
+                PhoneTextBox.Text = data.Rows[0][3].ToString();
+                AddresstextBox.Text = data.Rows[0][6].ToString();
+                NidTextbox.Text = data.Rows[0][4].ToString();
+                Visibility(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         #region Message for Users

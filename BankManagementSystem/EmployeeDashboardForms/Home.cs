@@ -1,6 +1,7 @@
 ﻿using BankDatabaseAccess;
 using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -19,7 +20,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
 
         private void EditLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Visibility(true);
+            FillTextBox();
             EditLnk.Visible = false;
         }
 
@@ -53,7 +54,24 @@ namespace BankManagementSystem.EmployeeDashboardForms
             _addressLbl.Text = data.Rows[0][6].ToString();
             _eamilLbl.Text = data.Rows[0][2].ToString();
         }
+        private void FillTextBox()
+        {
+            try
+            {
+                DataTable data;
+                data = new DataReader().GetSingleData(employee, UILogics.IsCustomer(), UILogics.IsEmployee());
+                EmailtextBox.Text = data.Rows[0][2].ToString();
+                PhoneTextBox.Text = data.Rows[0][3].ToString();
+                AddresstextBox.Text = data.Rows[0][6].ToString();
+                NidTextbox.Text = data.Rows[0][4].ToString();
+                Visibility(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
+        }
         private void Visibility(bool @bool)
         {
             notChangeableLbl.Visible = @bool;
@@ -73,7 +91,6 @@ namespace BankManagementSystem.EmployeeDashboardForms
                 MessageBox.Show("Something Went Wrong!");
         }
         #endregion
-
 
     }
 }

@@ -37,6 +37,8 @@ namespace BankManagementSystem.Dashboard_Forms
             this.PhoneLbl = new System.Windows.Forms.Label();
             this.BalanceLbl = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this._joinDateLbl = new System.Windows.Forms.Label();
+            this.JoinDateLbl = new System.Windows.Forms.Label();
             this.notChangeableLbl = new System.Windows.Forms.Label();
             this.PhoneTextBox = new System.Windows.Forms.TextBox();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
@@ -52,8 +54,6 @@ namespace BankManagementSystem.Dashboard_Forms
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.EditLnk = new System.Windows.Forms.LinkLabel();
             this.UpdateBtn = new System.Windows.Forms.Button();
-            this.JoinDateLbl = new System.Windows.Forms.Label();
-            this._joinDateLbl = new System.Windows.Forms.Label();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -170,6 +170,30 @@ namespace BankManagementSystem.Dashboard_Forms
             this.infoPanel.Size = new System.Drawing.Size(543, 248);
             this.infoPanel.TabIndex = 9;
             // 
+            // _joinDateLbl
+            // 
+            this._joinDateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._joinDateLbl.AutoSize = true;
+            this._joinDateLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._joinDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._joinDateLbl.Location = new System.Drawing.Point(124, 210);
+            this._joinDateLbl.Name = "_joinDateLbl";
+            this._joinDateLbl.Size = new System.Drawing.Size(103, 25);
+            this._joinDateLbl.TabIndex = 23;
+            this._joinDateLbl.Text = "<Joindate>";
+            // 
+            // JoinDateLbl
+            // 
+            this.JoinDateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.JoinDateLbl.AutoSize = true;
+            this.JoinDateLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JoinDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.JoinDateLbl.Location = new System.Drawing.Point(17, 210);
+            this.JoinDateLbl.Name = "JoinDateLbl";
+            this.JoinDateLbl.Size = new System.Drawing.Size(100, 25);
+            this.JoinDateLbl.TabIndex = 22;
+            this.JoinDateLbl.Text = "Join Date  :";
+            // 
             // notChangeableLbl
             // 
             this.notChangeableLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -185,6 +209,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // PhoneTextBox
             // 
+            this.PhoneTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.PhoneTextBox.Location = new System.Drawing.Point(349, 171);
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(189, 33);
@@ -193,6 +218,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // EmailtextBox
             // 
+            this.EmailtextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.EmailtextBox.Location = new System.Drawing.Point(349, 132);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(189, 33);
@@ -201,6 +227,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // AddresstextBox
             // 
+            this.AddresstextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.AddresstextBox.Location = new System.Drawing.Point(349, 88);
             this.AddresstextBox.Name = "AddresstextBox";
             this.AddresstextBox.Size = new System.Drawing.Size(189, 33);
@@ -209,6 +236,7 @@ namespace BankManagementSystem.Dashboard_Forms
             // 
             // NidTextbox
             // 
+            this.NidTextbox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.NidTextbox.Location = new System.Drawing.Point(349, 46);
             this.NidTextbox.Name = "NidTextbox";
             this.NidTextbox.Size = new System.Drawing.Size(189, 33);
@@ -338,30 +366,6 @@ namespace BankManagementSystem.Dashboard_Forms
             this.UpdateBtn.UseVisualStyleBackColor = true;
             this.UpdateBtn.Visible = false;
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
-            // 
-            // JoinDateLbl
-            // 
-            this.JoinDateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.JoinDateLbl.AutoSize = true;
-            this.JoinDateLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JoinDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.JoinDateLbl.Location = new System.Drawing.Point(17, 210);
-            this.JoinDateLbl.Name = "JoinDateLbl";
-            this.JoinDateLbl.Size = new System.Drawing.Size(100, 25);
-            this.JoinDateLbl.TabIndex = 22;
-            this.JoinDateLbl.Text = "Join Date  :";
-            // 
-            // _joinDateLbl
-            // 
-            this._joinDateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this._joinDateLbl.AutoSize = true;
-            this._joinDateLbl.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._joinDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._joinDateLbl.Location = new System.Drawing.Point(124, 210);
-            this._joinDateLbl.Name = "_joinDateLbl";
-            this._joinDateLbl.Size = new System.Drawing.Size(103, 25);
-            this._joinDateLbl.TabIndex = 23;
-            this._joinDateLbl.Text = "<Joindate>";
             // 
             // Home
             // 
