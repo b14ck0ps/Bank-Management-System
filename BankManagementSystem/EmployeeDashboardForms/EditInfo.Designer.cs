@@ -42,8 +42,8 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.EmailTextbox = new System.Windows.Forms.TextBox();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.UsernameTextbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.RemoveBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -110,7 +110,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.BalanceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BalanceTextBox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.BalanceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BalanceTextBox.ForeColor = System.Drawing.Color.Blue;
             this.BalanceTextBox.Location = new System.Drawing.Point(254, 309);
             this.BalanceTextBox.Name = "BalanceTextBox";
             this.BalanceTextBox.ReadOnly = true;
@@ -133,7 +133,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.Nidtextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Nidtextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Nidtextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Nidtextbox.ForeColor = System.Drawing.Color.Blue;
             this.Nidtextbox.Location = new System.Drawing.Point(254, 267);
             this.Nidtextbox.Name = "Nidtextbox";
             this.Nidtextbox.ReadOnly = true;
@@ -144,7 +144,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.AddressTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddressTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.AddressTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddressTextbox.ForeColor = System.Drawing.Color.Blue;
             this.AddressTextbox.Location = new System.Drawing.Point(254, 218);
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.ReadOnly = true;
@@ -155,7 +155,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.PhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PhoneTextBox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PhoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PhoneTextBox.ForeColor = System.Drawing.Color.Blue;
             this.PhoneTextBox.Location = new System.Drawing.Point(254, 171);
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.ReadOnly = true;
@@ -166,7 +166,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             // 
             this.EmailTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmailTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.EmailTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmailTextbox.ForeColor = System.Drawing.Color.Blue;
             this.EmailTextbox.Location = new System.Drawing.Point(254, 122);
             this.EmailTextbox.Name = "EmailTextbox";
             this.EmailTextbox.ReadOnly = true;
@@ -186,45 +186,48 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.SearchBtn.TabIndex = 24;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // UsernameTextbox
             // 
             this.UsernameTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UsernameTextbox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.UsernameTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            this.UsernameTextbox.ForeColor = System.Drawing.Color.Black;
             this.UsernameTextbox.Location = new System.Drawing.Point(279, 53);
             this.UsernameTextbox.Name = "UsernameTextbox";
             this.UsernameTextbox.Size = new System.Drawing.Size(190, 32);
             this.UsernameTextbox.TabIndex = 23;
             // 
-            // button1
+            // UpdateBtn
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(559, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 86);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Update\r\nUser";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.ForeColor = System.Drawing.Color.Green;
+            this.UpdateBtn.Location = new System.Drawing.Point(559, 145);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(109, 86);
+            this.UpdateBtn.TabIndex = 36;
+            this.UpdateBtn.Text = "Update\r\nUser";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
-            // button2
+            // RemoveBtn
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(559, 237);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 86);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Remove \r\nUser";
-            this.button2.UseVisualStyleBackColor = false;
+            this.RemoveBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RemoveBtn.BackColor = System.Drawing.Color.White;
+            this.RemoveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveBtn.ForeColor = System.Drawing.Color.Red;
+            this.RemoveBtn.Location = new System.Drawing.Point(559, 237);
+            this.RemoveBtn.Name = "RemoveBtn";
+            this.RemoveBtn.Size = new System.Drawing.Size(109, 86);
+            this.RemoveBtn.TabIndex = 37;
+            this.RemoveBtn.Text = "Remove \r\nUser";
+            this.RemoveBtn.UseVisualStyleBackColor = false;
+            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
             // 
             // EditInfo
             // 
@@ -232,8 +235,8 @@ namespace BankManagementSystem.EmployeeDashboardForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 390);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RemoveBtn);
+            this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -272,7 +275,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
         private System.Windows.Forms.TextBox EmailTextbox;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox UsernameTextbox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button RemoveBtn;
     }
 }

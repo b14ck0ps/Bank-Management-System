@@ -48,7 +48,9 @@ namespace BankDatabaseAccess.DatabaseOperation
             var query = @"UPDATE dbo.[dbo.Customers] SET 
                         Email = '" + personModel.Eamil + "'," +
                         "Phone = '" + personModel.Phone + "'," +
-                        "Nid = '" + personModel.Nid + "'";
+                        "Address = '" + personModel.Address + "'," +
+                        "Nid = '" + personModel.Nid + "'" +
+                        "WHERE Username = '" + personModel.Username + "'";
 
             return DatabaseConnection.Execute(query);
         }
