@@ -25,22 +25,29 @@ namespace BankManagementSystem
         #region place holder logics
         private void UsernameTextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox:UsernameTextbox,placeholder: "Username");
+            UILogics.EnterUpdate(textBox:UsernameTextbox,placeholder: UsernamePalceholder);
         }
 
         private void UsernameTextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: UsernameTextbox, placeholder: "Username");
+            UILogics.LeaveUpdate(textBox: UsernameTextbox, placeholder: UsernamePalceholder);
         }
 
         private void PasswordTextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: PasswordTextbox, placeholder: "Password");
+            UILogics.EnterUpdate(textBox: PasswordTextbox, placeholder: PasswordPalceholder);
+            PasswordTextbox.PasswordChar = '*';
+
         }
         
         private void PasswordTextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: PasswordTextbox, placeholder: "Password");
+            if (PasswordTextbox.Text == "")
+            {
+                PasswordTextbox.PasswordChar = '\0';
+            }
+            UILogics.LeaveUpdate(textBox: PasswordTextbox, placeholder: PasswordPalceholder);
+
         }
 
         #endregion
@@ -139,6 +146,9 @@ namespace BankManagementSystem
            else
                 return false;
         }
-        private readonly string error = "Username or password is not correct!";
+
+        private const string error = "Username or password is not correct!";
+        private const string UsernamePalceholder = "Username";
+        private const string PasswordPalceholder = "Password";
     }
 }

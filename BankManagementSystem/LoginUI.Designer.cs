@@ -56,7 +56,6 @@ namespace BankManagementSystem
             this.PasswordTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.PasswordTextbox.Location = new System.Drawing.Point(42, 287);
             this.PasswordTextbox.Name = "PasswordTextbox";
-            this.PasswordTextbox.PasswordChar = '*';
             this.PasswordTextbox.Size = new System.Drawing.Size(286, 32);
             this.PasswordTextbox.TabIndex = 1;
             this.PasswordTextbox.Text = "Password";
