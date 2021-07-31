@@ -191,5 +191,8 @@
   <ItemGroup>
     <None Include="Resources\getStarted_.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gitIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

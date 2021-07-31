@@ -32,8 +32,9 @@ namespace BankManagementSystem
             this.WelcomeLbl = new System.Windows.Forms.Label();
             this.AppCloseLbl = new System.Windows.Forms.Label();
             this.EmpLink = new System.Windows.Forms.LinkLabel();
-            this.LogoPicure = new System.Windows.Forms.PictureBox();
+            this.GitBtn = new System.Windows.Forms.Button();
             this.GetStartedBtn = new System.Windows.Forms.Button();
+            this.LogoPicure = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,16 +79,18 @@ namespace BankManagementSystem
             this.EmpLink.Text = "Employee?";
             this.EmpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EmpLink_LinkClicked);
             // 
-            // LogoPicure
+            // GitBtn
             // 
-            this.LogoPicure.Image = global::BankManagementSystem.Properties.Resources.Logo;
-            this.LogoPicure.Location = new System.Drawing.Point(248, 30);
-            this.LogoPicure.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.LogoPicure.Name = "LogoPicure";
-            this.LogoPicure.Size = new System.Drawing.Size(171, 86);
-            this.LogoPicure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoPicure.TabIndex = 7;
-            this.LogoPicure.TabStop = false;
+            this.GitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GitBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.GitBtn.Image = global::BankManagementSystem.Properties.Resources.gitIcon;
+            this.GitBtn.Location = new System.Drawing.Point(442, 210);
+            this.GitBtn.Name = "GitBtn";
+            this.GitBtn.Size = new System.Drawing.Size(42, 46);
+            this.GitBtn.TabIndex = 9;
+            this.GitBtn.UseVisualStyleBackColor = true;
+            this.GitBtn.Click += new System.EventHandler(this.GitBtn_Click);
             // 
             // GetStartedBtn
             // 
@@ -104,12 +107,24 @@ namespace BankManagementSystem
             this.GetStartedBtn.MouseLeave += new System.EventHandler(this.GetStartedBtn_MouseLeave);
             this.GetStartedBtn.MouseHover += new System.EventHandler(this.GetStartedBtn_MouseHover);
             // 
+            // LogoPicure
+            // 
+            this.LogoPicure.Image = global::BankManagementSystem.Properties.Resources.Logo;
+            this.LogoPicure.Location = new System.Drawing.Point(248, 30);
+            this.LogoPicure.Margin = new System.Windows.Forms.Padding(6);
+            this.LogoPicure.Name = "LogoPicure";
+            this.LogoPicure.Size = new System.Drawing.Size(171, 86);
+            this.LogoPicure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoPicure.TabIndex = 7;
+            this.LogoPicure.TabStop = false;
+            // 
             // WelcomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(485, 260);
+            this.Controls.Add(this.GitBtn);
             this.Controls.Add(this.GetStartedBtn);
             this.Controls.Add(this.LogoPicure);
             this.Controls.Add(this.EmpLink);
@@ -117,7 +132,7 @@ namespace BankManagementSystem
             this.Controls.Add(this.WelcomeLbl);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "WelcomeUI";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -135,5 +150,6 @@ namespace BankManagementSystem
         private System.Windows.Forms.LinkLabel EmpLink;
         private System.Windows.Forms.PictureBox LogoPicure;
         private System.Windows.Forms.Button GetStartedBtn;
+        private System.Windows.Forms.Button GitBtn;
     }
 }
