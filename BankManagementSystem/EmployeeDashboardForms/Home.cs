@@ -1,5 +1,4 @@
-﻿using BankDatabaseAccess;
-using BankDatabaseAccess.DatabaseOperation;
+﻿using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
 using System;
 using System.Data;
@@ -24,7 +23,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             EditLnk.Visible = false;
         }
 
-        private void UpdateBtn_Click(object sender, System.EventArgs e)
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
             Visibility(false);
             EditLnk.Visible = true;
