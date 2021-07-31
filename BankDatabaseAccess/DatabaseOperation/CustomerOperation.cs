@@ -36,8 +36,7 @@ namespace BankDatabaseAccess.DatabaseOperation
         public int Update(PersonModel personModel)
         {
             var query = @"UPDATE dbo.[dbo.Customers] SET 
-                        FullName = '" + personModel.FullName + "'," +
-                         "Email = '" + personModel.Eamil + "'," +
+                         Email = '" + personModel.Eamil + "'," +
                          "Phone = '" + personModel.Phone + "'," +
                          "Nid = '" + personModel.Nid + "'," +
                          "Address = '" + personModel.Address + "'" +

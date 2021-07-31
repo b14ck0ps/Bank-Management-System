@@ -62,8 +62,7 @@ namespace BankDatabaseAccess.DatabaseOperation
         public int SelfUpdate(PersonModel personModel)
         {
             var query = @"UPDATE dbo.[dbo.Employee] SET 
-                        FullName = '" + personModel.FullName + "'," +
-                        "Email = '" + personModel.Eamil + "'," +
+                        Email = '" + personModel.Eamil + "'," +
                         "Phone = '" + personModel.Phone + "'," +
                         "Address = '" + personModel.Address + "'," +
                         "Nid = '" + personModel.Nid + "'" +
