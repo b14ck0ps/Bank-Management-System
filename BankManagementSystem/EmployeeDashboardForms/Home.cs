@@ -26,18 +26,15 @@ namespace BankManagementSystem.EmployeeDashboardForms
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            PersonModel personModel = new EmployeeModel()
-            {
-                Username = employee.Username,
-                Nid = NidTextbox.Text,
-                Address = AddresstextBox.Text,
-                Eamil = EmailtextBox.Text,
-                Phone = PhoneTextBox.Text,
-            };
+            employee.Username = employee.Username;
+            employee.Nid = NidTextbox.Text;
+            employee.Address = AddresstextBox.Text;
+            employee.Eamil = EmailtextBox.Text;
+            employee.Phone = PhoneTextBox.Text;
             if (FormValidation())
             {
                 Visibility(false);
-                UpdatedDB(new EmployeeOperations().SelfUpdate(personModel));
+                UpdatedDB(new EmployeeOperations().SelfUpdate(employee));
                 UpdateUi();
                 UpdateBtn.Visible = false;
                 EditLnk.Visible = true;
@@ -98,6 +95,10 @@ namespace BankManagementSystem.EmployeeDashboardForms
             if (string.IsNullOrEmpty(AddresstextBox.Text))
             {
                 output = false;
+            }
+            if (string.IsNullOrEmpty(PhoneTextBox.Text))
+            {
+                employee.Phone = "N/A";
             }
             if (string.IsNullOrEmpty(NidTextbox.Text))
             {

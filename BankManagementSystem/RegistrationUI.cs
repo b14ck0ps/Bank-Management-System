@@ -9,6 +9,7 @@ namespace BankManagementSystem
 {
     public partial class RegistrationUI : Form
     {
+        readonly PersonModel User = new CustomerModel();
         public RegistrationUI()
         {
             InitializeComponent();
@@ -93,16 +94,13 @@ namespace BankManagementSystem
         #endregion
         private void RegistrationBtn_Click(object sender, EventArgs e)
         {
-            PersonModel User = new CustomerModel
-            {
-                Username = UsernameTextbox.Text,
-                FullName = FullNametextBox.Text,
-                Password = PasswordTextbox.Text,
-                Eamil = EmailTextbox.Text,
-                Phone = PhoneTextBox.Text,
-                Nid = Nidtextbox.Text,
-                Address = AddressTextbox.Text
-            };
+            User.Username = UsernameTextbox.Text;
+            User.FullName = FullNametextBox.Text;
+            User.Password = PasswordTextbox.Text;
+            User.Eamil = EmailTextbox.Text;
+            User.Phone = PhoneTextBox.Text;
+            User.Nid = Nidtextbox.Text;
+            User.Address = AddressTextbox.Text;
             if (ValidForm())
             {
                 if (UILogics.IsEmployee())
@@ -144,12 +142,11 @@ namespace BankManagementSystem
                 EmailTextbox.ForeColor = Color.OrangeRed;
                 output = false;
             }
-            //optional
-            //if (string.IsNullOrEmpty(PhoneTextBox.Text) || PhoneTextBox.Text == PhonePlaceholder)
-            //{
-            //    PhoneTextBox.ForeColor = Color.OrangeRed;
-            //    output = false;
-            //}
+            //if phone number not given store N/A to database
+            if (string.IsNullOrEmpty(PhoneTextBox.Text) || PhoneTextBox.Text == PhonePlaceholder)
+            {
+                User.Phone = "N/A";
+            }
             if (string.IsNullOrEmpty(Nidtextbox.Text) || Nidtextbox.Text == NidPlaceholder)
             {
                 Nidtextbox.ForeColor = Color.OrangeRed;

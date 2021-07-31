@@ -37,18 +37,16 @@ namespace BankManagementSystem.Dashboard_Forms
         }
         private void UpdateBtn_Click(object sender, System.EventArgs e)
         {
-            PersonModel personModel = new CustomerModel()
-            {
-                Username = customer.Username,
-                Nid = NidTextbox.Text,
-                Address = AddresstextBox.Text,
-                Eamil = EmailtextBox.Text,
-                Phone = PhoneTextBox.Text,
-            };
+            customer.Username = customer.Username;
+            customer.Nid = NidTextbox.Text;
+            customer.Address = AddresstextBox.Text;
+            customer.Eamil = EmailtextBox.Text;
+            customer.Phone = PhoneTextBox.Text;
+ 
             if (FormValidation())
             {
                 Visibility(false);
-                UpdatedDB(new CustomerOperation().Update(personModel));
+                UpdatedDB(new CustomerOperation().Update(customer));
                 UpdateBtn.Visible = false;
                 EditLnk.Visible = true;
                 UpdateUi();
@@ -97,6 +95,10 @@ namespace BankManagementSystem.Dashboard_Forms
             if (string.IsNullOrEmpty(AddresstextBox.Text))
             {
                 output = false;
+            }
+            if (string.IsNullOrEmpty(PhoneTextBox.Text))
+            {
+                customer.Phone = "N/A";
             }
             if (string.IsNullOrEmpty(NidTextbox.Text))
             {

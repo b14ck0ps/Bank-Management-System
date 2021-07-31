@@ -114,7 +114,11 @@ namespace BankManagementSystem.EmployeeDashboardForms
             {
                 output = false;
             }
-            if (string.IsNullOrEmpty(Nidtextbox.Text))
+            if (string.IsNullOrEmpty(PhoneTextBox.Text))
+            {
+                customer.Phone = "N/A";
+            }
+                if (string.IsNullOrEmpty(Nidtextbox.Text))
             {
                 output = false;
             }
