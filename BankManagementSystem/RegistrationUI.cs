@@ -2,6 +2,7 @@
 using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace BankManagementSystem
@@ -24,70 +25,70 @@ namespace BankManagementSystem
         #region Place Holder logics
         private void UsernameTextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: UsernameTextbox, placeholder: "Enter a Username");
+            UILogics.EnterUpdate(textBox: UsernameTextbox, placeholder: UsernamePlaceholder);
         }
 
         private void UsernameTextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: UsernameTextbox, placeholder: "Enter a Username");
+            UILogics.LeaveUpdate(textBox: UsernameTextbox, placeholder: UsernamePlaceholder);
         }
         private void FullNametextBox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: FullNametextBox, placeholder: "Enter Your Full Name");
+            UILogics.EnterUpdate(textBox: FullNametextBox, placeholder: FullnamePlaceholder);
         }
 
         private void FullNametextBox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: FullNametextBox, placeholder: "Enter Your Full Name");
+            UILogics.LeaveUpdate(textBox: FullNametextBox, placeholder: FullnamePlaceholder);
         }
         private void PasswordTextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: PasswordTextbox, placeholder: "Enter a Password");
+            UILogics.EnterUpdate(textBox: PasswordTextbox, placeholder: PasswordPlaceholder);
         }
 
         private void PasswordTextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: PasswordTextbox, placeholder: "Enter a Password");
+            UILogics.LeaveUpdate(textBox: PasswordTextbox, placeholder: PasswordPlaceholder);
         }
 
         private void EmailTextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: EmailTextbox, placeholder: "Enter Your Email");
+            UILogics.EnterUpdate(textBox: EmailTextbox, placeholder: EmailPlaceholder);
         }
 
         private void EmailTextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: EmailTextbox, placeholder: "Enter Your Email");
+            UILogics.LeaveUpdate(textBox: EmailTextbox, placeholder: EmailPlaceholder);
         }
 
         private void PhoneTextBox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: PhoneTextBox, placeholder: "Enter Your Phone");
+            UILogics.EnterUpdate(textBox: PhoneTextBox, placeholder: PhonePlaceholder);
         }
 
         private void PhoneTextBox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: PhoneTextBox, placeholder: "Enter Your Phone");
+            UILogics.LeaveUpdate(textBox: PhoneTextBox, placeholder: PhonePlaceholder);
         }
 
         private void AddressTextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: AddressTextbox, placeholder: "Enter Your Address");
+            UILogics.EnterUpdate(textBox: AddressTextbox, placeholder: AddressPlaceholder);
         }
 
         private void AddressTextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: AddressTextbox, placeholder: "Enter Your Address");
+            UILogics.LeaveUpdate(textBox: AddressTextbox, placeholder: AddressPlaceholder);
         }
 
         private void Nidtextbox_Enter(object sender, EventArgs e)
         {
-            UILogics.EnterUpdate(textBox: Nidtextbox, placeholder: "Enter Your Nation ID no");
+            UILogics.EnterUpdate(textBox: Nidtextbox, placeholder: NidPlaceholder);
         }
 
         private void Nidtextbox_Leave(object sender, EventArgs e)
         {
-            UILogics.LeaveUpdate(textBox: Nidtextbox, placeholder: "Enter Your Nation ID no");
+            UILogics.LeaveUpdate(textBox: Nidtextbox, placeholder: NidPlaceholder);
         }
         #endregion
         private void RegistrationBtn_Click(object sender, EventArgs e)
@@ -102,10 +103,14 @@ namespace BankManagementSystem
                 Nid = Nidtextbox.Text,
                 Address = AddressTextbox.Text
             };
-            if (UILogics.IsEmployee())
-                UpdatedDB(new EmployeeOperations().Insert(User));
-            if (UILogics.IsCustomer())
-                UpdatedDB(new CustomerOperation().Insert(User));
+            if (ValidForm())
+            {
+                if (UILogics.IsEmployee())
+                    UpdatedDB(new EmployeeOperations().Insert(User));
+                if (UILogics.IsCustomer())
+                    UpdatedDB(new CustomerOperation().Insert(User));
+            }else
+                MessageBox.Show("Please Enter all the details");
         }
 
         private void LnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -114,7 +119,48 @@ namespace BankManagementSystem
             this.Close();
             new LoginUI().Show();
         }
+        private bool ValidForm()
+        {
+            bool output = true;
 
+            if (string.IsNullOrEmpty(UsernameTextbox.Text) || UsernameTextbox.Text == UsernamePlaceholder)
+            {
+                UsernameTextbox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
+            if (string.IsNullOrEmpty(FullNametextBox.Text) || FullNametextBox.Text == FullnamePlaceholder)
+            {
+                FullNametextBox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
+            if (string.IsNullOrEmpty(PasswordTextbox.Text) || PasswordTextbox.Text == PasswordPlaceholder)
+            {
+                PasswordTextbox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
+            if (string.IsNullOrEmpty(EmailTextbox.Text) || EmailTextbox.Text == EmailPlaceholder)
+            {
+                EmailTextbox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
+            //optional
+            //if (string.IsNullOrEmpty(PhoneTextBox.Text) || PhoneTextBox.Text == PhonePlaceholder)
+            //{
+            //    PhoneTextBox.ForeColor = Color.OrangeRed;
+            //    output = false;
+            //}
+            if (string.IsNullOrEmpty(Nidtextbox.Text) || Nidtextbox.Text == NidPlaceholder)
+            {
+                Nidtextbox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
+            if (string.IsNullOrEmpty(AddressTextbox.Text) || AddressTextbox.Text == AddressPlaceholder)
+            {
+                AddressTextbox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
+            return output;
+        }
         #region Message for Users
         private void UpdatedDB(int EffectedRow)
         {
@@ -134,6 +180,15 @@ namespace BankManagementSystem
                 MessageBox.Show("Something Went Wrong!");
             }
         }
+        #endregion
+        #region placeholder strings
+        private const string UsernamePlaceholder = "Enter a Username";
+        private const string FullnamePlaceholder = "Enter Your Full Name";
+        private const string PasswordPlaceholder = "Enter a Password";
+        private const string EmailPlaceholder = "Enter Your Email";
+        private const string PhonePlaceholder = "Enter Your Phone";
+        private const string AddressPlaceholder = "Enter Your Address";
+        private const string NidPlaceholder = "Enter Your Nation ID no";
         #endregion
     }
 }
