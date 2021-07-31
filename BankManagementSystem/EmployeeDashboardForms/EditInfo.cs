@@ -40,7 +40,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
                 PhoneTextBox.Text = data.Rows[0][3].ToString();
                 AddressTextbox.Text = data.Rows[0][6].ToString();
                 Nidtextbox.Text = data.Rows[0][4].ToString();
-                BalanceTextBox.Text = data.Rows[0][5].ToString();
+                BalanceTextBox.Text = ((decimal)(data.Rows[0][5])).ToString("N", UILogics.SetPrecision(2)) + " $";
                 ReadOnlyMode(false);
             }
             catch (Exception)

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace BankManagementSystem
@@ -71,6 +67,18 @@ namespace BankManagementSystem
             form.Dock = DockStyle.Fill;
             panel.Controls.Add(form);
             form.Show();
+        }
+        /// <summary>
+        /// This method Change decimal value precision
+        /// </summary>
+        /// <param name="n">Number Digit you want after . </param>
+        /// <returns>NumberFormatInfo object. It should be use inside  ToString() to properly work</returns>
+        public  static NumberFormatInfo SetPrecision(int n)
+        {
+            return new NumberFormatInfo
+            {
+                NumberDecimalDigits = n
+            };
         }
     }
     

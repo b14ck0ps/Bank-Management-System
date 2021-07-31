@@ -1,10 +1,8 @@
-﻿using BankDatabaseAccess;
-using BankDatabaseAccess.DatabaseOperation;
+﻿using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
 using System;
 using System.Data;
 using System.Windows.Forms;
-using static BankDatabaseAccess.DatabaseConnection;
 
 namespace BankManagementSystem.Dashboard_Forms
 {
@@ -29,7 +27,7 @@ namespace BankManagementSystem.Dashboard_Forms
             _addressLbl.Text = data.Rows[0][6].ToString();
             _eamilLbl.Text = data.Rows[0][2].ToString();
             _joinDateLbl.Text = data.Rows[0][7].ToString();
-            BalanceLbl.Text = $"Current Balance : { data.Rows[0][5] } $";
+            BalanceLbl.Text = $"Current Balance : { ((decimal)(data.Rows[0][5])).ToString("N", UILogics.SetPrecision(2)) } $";
         }
 
         private void EditLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -46,7 +46,7 @@ namespace BankManagementSystem.Dashboard_Forms
         }
         private void UpdateUI()
         {
-            BalanceLbl.Text = $"Current Balance : { GetBalance() } Taka";
+            BalanceLbl.Text = $"Current Balance : { GetBalance().ToString("N", UILogics.SetPrecision(2)) } $";
             AmountTextBox.Text = PlaceHolderText;
             AmountTextBox.ForeColor = Color.DarkGray;
         }
