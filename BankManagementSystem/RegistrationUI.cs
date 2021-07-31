@@ -119,6 +119,7 @@ namespace BankManagementSystem
             this.Close();
             new LoginUI().Show();
         }
+        #region Form validation logics
         private bool ValidForm()
         {
             bool output = true;
@@ -161,6 +162,7 @@ namespace BankManagementSystem
             }
             return output;
         }
+        #endregion
         #region Message for Users
         private void UpdatedDB(int EffectedRow)
         {
