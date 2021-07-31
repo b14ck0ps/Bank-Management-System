@@ -56,15 +56,23 @@ namespace BankManagementSystem.EmployeeDashboardForms
             customer.Phone = PhoneTextBox.Text;
             customer.Nid = Nidtextbox.Text;
             customer.Address = AddressTextbox.Text;
-            if (new EmployeeOperations().Update(customer) > 0)
+            if (FormValidation())
             {
-                MessageBox.Show($" {customer.Username} INFO Updated");
-;               ClearFilds();
-            } else
-            {
-                MessageBox.Show(error);
+                if (new EmployeeOperations().Update(customer) > 0)
+                {
+                    MessageBox.Show($" {customer.Username} INFO Updated");
+                    ; ClearFilds();
+                }
+                else
+                {
+                    MessageBox.Show(error);
+                }
             }
-            
+            else
+            {
+                MessageBox.Show("Enter All the information");
+            }
+        
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
@@ -77,9 +85,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             else
             {
                 MessageBox.Show(error);
-            }
-            
-            
+            }  
         }
 
         private void ClearFilds()
@@ -92,7 +98,29 @@ namespace BankManagementSystem.EmployeeDashboardForms
             Nidtextbox.Text = null;
             BalanceTextBox.Text = null;
         }
-
-        private readonly string error = "Invalid Username";
+        #region Form validation Logics
+        private bool FormValidation()
+        {
+            bool output = true;
+            if (string.IsNullOrEmpty(UsernameTextbox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(EmailTextbox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(AddressTextbox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(Nidtextbox.Text))
+            {
+                output = false;
+            }
+            return output;
+        }
+        #endregion
+        private const string error = "Invalid Username";
     }
 }

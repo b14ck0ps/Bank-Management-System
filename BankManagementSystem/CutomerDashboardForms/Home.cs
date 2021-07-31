@@ -39,9 +39,6 @@ namespace BankManagementSystem.Dashboard_Forms
         }
         private void UpdateBtn_Click(object sender, System.EventArgs e)
         {
-            Visibility(false);
-            EditLnk.Visible = true;
-
             PersonModel personModel = new CustomerModel()
             {
                 Username = customer.Username,
@@ -50,9 +47,18 @@ namespace BankManagementSystem.Dashboard_Forms
                 Eamil = EmailtextBox.Text,
                 Phone = PhoneTextBox.Text,
             };
-
-            UpdatedDB(new CustomerOperation().Update(personModel));
-            UpdateUi();
+            if (FormValidation())
+            {
+                Visibility(false);
+                UpdatedDB(new CustomerOperation().Update(personModel));
+                UpdateBtn.Visible = false;
+                EditLnk.Visible = true;
+                UpdateUi();
+            }
+            else
+            {
+                MessageBox.Show("Enter all the details");
+            }
         }
         private void Visibility(bool @bool)
         {
@@ -61,7 +67,6 @@ namespace BankManagementSystem.Dashboard_Forms
             AddresstextBox.Visible = @bool;
             EmailtextBox.Visible = @bool;
             PhoneTextBox.Visible = @bool;
-            UpdateBtn.Visible = @bool;
         }
 
         private void FillTextBox()
@@ -75,6 +80,7 @@ namespace BankManagementSystem.Dashboard_Forms
                 AddresstextBox.Text = data.Rows[0][6].ToString();
                 NidTextbox.Text = data.Rows[0][4].ToString();
                 Visibility(true);
+                UpdateBtn.Visible = true;
             }
             catch (Exception)
             {
@@ -82,7 +88,25 @@ namespace BankManagementSystem.Dashboard_Forms
             }
 
         }
-
+        #region Form validation
+        private  bool FormValidation()
+        {
+            bool output = true;
+            if (string.IsNullOrEmpty(EmailtextBox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(AddresstextBox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(NidTextbox.Text))
+            {
+                output = false;
+            }
+            return output;
+        }
+        #endregion
         #region Message for Users
         private void UpdatedDB(int EffectedRow)
         {

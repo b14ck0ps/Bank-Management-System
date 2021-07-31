@@ -21,13 +21,11 @@ namespace BankManagementSystem.EmployeeDashboardForms
         {
             FillTextBox();
             EditLnk.Visible = false;
+            UpdateBtn.Visible = true;
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            Visibility(false);
-            EditLnk.Visible = true;
-
             PersonModel personModel = new EmployeeModel()
             {
                 Username = employee.Username,
@@ -36,9 +34,19 @@ namespace BankManagementSystem.EmployeeDashboardForms
                 Eamil = EmailtextBox.Text,
                 Phone = PhoneTextBox.Text,
             };
-
-            UpdatedDB(new EmployeeOperations().SelfUpdate(personModel));
-            UpdateUi();
+            if (FormValidation())
+            {
+                Visibility(false);
+                UpdatedDB(new EmployeeOperations().SelfUpdate(personModel));
+                UpdateUi();
+                UpdateBtn.Visible = false;
+                EditLnk.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Enter Full all informations");
+            }
+            
         }
 
         private void UpdateUi()
@@ -78,9 +86,26 @@ namespace BankManagementSystem.EmployeeDashboardForms
             AddresstextBox.Visible = @bool;
             EmailtextBox.Visible = @bool;
             PhoneTextBox.Visible = @bool;
-            UpdateBtn.Visible = @bool;
         }
-
+        #region Form validation
+        private bool FormValidation()
+        {
+            bool output = true;
+            if (string.IsNullOrEmpty(EmailtextBox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(AddresstextBox.Text))
+            {
+                output = false;
+            }
+            if (string.IsNullOrEmpty(NidTextbox.Text))
+            {
+                output = false;
+            }
+            return output;
+        }
+        #endregion
         #region Message for Users
         private void UpdatedDB(int EffectedRow)
         {
