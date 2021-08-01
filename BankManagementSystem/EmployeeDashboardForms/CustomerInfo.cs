@@ -8,15 +8,18 @@ namespace BankManagementSystem.EmployeeDashboardForms
         public CustomerInfo()
         {
             InitializeComponent();
-            GridStyle();
             CustomerdataGridView.DataSource = new DataReader().GetAllData(customer: true);
+            GridStyle();
         }
         private void GridStyle()
         {
-            // TODO - Fix Balance precision. Only two digit after balance
-            // TODO - Fix Account Create Date. Only date will be enough.Time is not needed 
             CustomerdataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             CustomerdataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
+            //[4] is Money coloumn and C2 is Money Format String
+            CustomerdataGridView.Columns[4].DefaultCellStyle.Format = "C2";
+            //[6] is Join Date coloumn and d is Standard Date Format String
+            CustomerdataGridView.Columns[6].DefaultCellStyle.Format = "d";
         }
     }
 }
