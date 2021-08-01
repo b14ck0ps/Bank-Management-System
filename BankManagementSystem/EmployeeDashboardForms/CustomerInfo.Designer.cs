@@ -68,6 +68,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.CustomerdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.CustomerdataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle3.NullValue = null;
             this.CustomerdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.CustomerdataGridView.RowTemplate.DefaultCellStyle.NullValue = "0";
