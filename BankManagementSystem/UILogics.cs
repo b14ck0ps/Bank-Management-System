@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using BankDatabaseAccess.DatabaseOperation;
+using BankDatabaseAccess.EntityModel;
+using System.Drawing;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -8,19 +10,11 @@ namespace BankManagementSystem
     public static class UILogics 
     {
         public static UserType User;
-        public static PasswordError passwordError;
         
         public enum UserType
         {
             Employee,
             Customer    
-        }
-
-        public enum PasswordError
-        {
-            NUllPassword,
-            LessThenEightChar,
-            NoUpperCaseChar
         }
         public static bool IsCustomer()
         {
@@ -111,6 +105,31 @@ namespace BankManagementSystem
                 return false;
             }
             return true;
+        }
+        /// <summary>
+        /// Show YES CANCLE Warning Before deleting user account
+        /// </summary>
+        /// <param name="personModel">Person object</param>
+        /// <returns>true if account is deteled</returns>
+        public static bool DeleteWarning(PersonModel personModel)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are You sure you want to delete this account? " +
+                                                "\nThis will Detele All the information form the Bank Database",
+                                                 "Delete This Account", MessageBoxButtons.OKCancel);
+            switch (dialogResult)
+            {
+                case DialogResult.None:
+                break;
+                case DialogResult.OK:
+                    new CustomerOperation().Delete(personModel);
+                    new LoginUI().Show();
+                    return true;
+                case DialogResult.Cancel:
+                    break;
+                default:
+                    break;
+            }
+            return false;
         }
     }
 }

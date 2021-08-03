@@ -77,15 +77,21 @@ namespace BankManagementSystem.EmployeeDashboardForms
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
-            if (new EmployeeOperations().Delete(customer) > 0)
+            if (FormValidation())
             {
-                ClearFilds();
-                MessageBox.Show("User Deleted");
+                if (UILogics.DeleteWarning(customer))
+                {
+                    if (new EmployeeOperations().Delete(customer) > 0)
+                    {
+                        ClearFilds();
+                        MessageBox.Show("User Deleted");
+                    }
+                    else
+                    {
+                        MessageBox.Show(error);
+                    }
+                }
             }
-            else
-            {
-                MessageBox.Show(error);
-            }  
         }
 
         private void ClearFilds()

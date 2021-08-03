@@ -52,9 +52,10 @@ namespace BankManagementSystem
 
         private void DeleteLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Close();
-            new CustomerOperation().Delete(personModel);
-            new LoginUI().Show();
+            if (UILogics.DeleteWarning(personModel))
+            {
+                Close();
+            }
         }
     }
 }

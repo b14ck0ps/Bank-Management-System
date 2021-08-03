@@ -60,5 +60,13 @@ namespace BankManagementSystem
             this.Close();
             new LoginUI().Show();
         }
+
+        private void DeleteLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (UILogics.DeleteWarning(personModel))
+            {
+                Close();
+            }
+        }
     }
 }
