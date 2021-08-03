@@ -1,4 +1,5 @@
-﻿using BankDatabaseAccess.EntityModel;
+﻿using BankDatabaseAccess.DatabaseOperation;
+using BankDatabaseAccess.EntityModel;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -47,6 +48,13 @@ namespace BankManagementSystem
             DepositBtn.BackColor = Color.White;
             WithdrawBtn.BackColor = Color.WhiteSmoke;
             UILogics.LoadForm(MainPanel, new Dashboard_Forms.Withdraw(personModel));
+        }
+
+        private void DeleteLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
+            new CustomerOperation().Delete(personModel);
+            new LoginUI().Show();
         }
     }
 }
