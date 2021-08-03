@@ -29,7 +29,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
             employee.Username = employee.Username;
             employee.Nid = NidTextbox.Text;
             employee.Address = AddresstextBox.Text;
-            employee.Eamil = EmailtextBox.Text;
+            employee.Eamil = EmailtextBox.Text.ToLower();
             employee.Phone = PhoneTextBox.Text;
             if (FormValidation())
             {

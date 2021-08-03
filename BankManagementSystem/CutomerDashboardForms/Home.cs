@@ -40,7 +40,7 @@ namespace BankManagementSystem.Dashboard_Forms
             customer.Username = customer.Username;
             customer.Nid = NidTextbox.Text;
             customer.Address = AddresstextBox.Text;
-            customer.Eamil = EmailtextBox.Text;
+            customer.Eamil = EmailtextBox.Text.ToLower();
             customer.Phone = PhoneTextBox.Text;
  
             if (FormValidation())

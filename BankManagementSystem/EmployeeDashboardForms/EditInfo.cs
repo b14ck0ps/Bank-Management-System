@@ -52,7 +52,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            customer.Eamil = EmailTextbox.Text;
+            customer.Eamil = EmailTextbox.Text.ToLower();
             customer.Phone = PhoneTextBox.Text;
             customer.Nid = Nidtextbox.Text;
             customer.Address = AddressTextbox.Text;
