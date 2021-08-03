@@ -68,7 +68,7 @@ namespace BankManagementSystem
             this.DepositBtn.Name = "DepositBtn";
             this.DepositBtn.Size = new System.Drawing.Size(122, 55);
             this.DepositBtn.TabIndex = 2;
-            this.DepositBtn.Text = "Deposit";
+            this.DepositBtn.Text = "Transfer";
             this.DepositBtn.UseVisualStyleBackColor = false;
             this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 

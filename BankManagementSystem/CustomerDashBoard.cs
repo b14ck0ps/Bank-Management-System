@@ -41,7 +41,7 @@ namespace BankManagementSystem
             DepositBtn.BackColor = Color.WhiteSmoke;
             WithdrawBtn.BackColor = Color.White;
             DeleteLnkVisible(false);
-            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Deposit(personModel));
+            UILogics.LoadForm(MainPanel, new Dashboard_Forms.Tansfer(personModel));
         }
 
         private void WithdrawBtn_Click(object sender, EventArgs e)
