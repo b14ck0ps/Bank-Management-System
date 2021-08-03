@@ -96,7 +96,7 @@ namespace BankManagementSystem.EmployeeDashboardForms
                     UpdateUi();
                 }
                 else
-                    MessageBox.Show(error);
+                    MessageBox.Show("Invalid Amount");
             }
             else
                 MessageBox.Show("Invalid Input");
