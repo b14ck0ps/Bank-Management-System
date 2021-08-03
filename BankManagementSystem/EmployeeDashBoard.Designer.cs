@@ -158,6 +158,7 @@ namespace BankManagementSystem
             this.DeleteLnk.TabIndex = 3;
             this.DeleteLnk.TabStop = true;
             this.DeleteLnk.Text = "Delete";
+            this.DeleteLnk.Visible = false;
             this.DeleteLnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteLnk_LinkClicked);
             // 
             // DeleteAccountLbl
@@ -169,6 +170,7 @@ namespace BankManagementSystem
             this.DeleteAccountLbl.Size = new System.Drawing.Size(94, 17);
             this.DeleteAccountLbl.TabIndex = 2;
             this.DeleteAccountLbl.Text = "This Account !";
+            this.DeleteAccountLbl.Visible = false;
             // 
             // MainPanel
             // 

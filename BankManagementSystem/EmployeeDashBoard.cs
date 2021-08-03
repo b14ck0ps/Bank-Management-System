@@ -37,6 +37,7 @@ namespace BankManagementSystem
             CustomerInfoBtn.BackColor = Color.White;
             EditInfoBtn.BackColor = Color.White;
             DepositBtn.BackColor = Color.White;
+            DeleteLnkVisible(true);
             UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.Home(personModel));
         }
 
@@ -46,6 +47,7 @@ namespace BankManagementSystem
             CustomerInfoBtn.BackColor = Color.WhiteSmoke;
             EditInfoBtn.BackColor = Color.White;
             DepositBtn.BackColor = Color.White;
+            DeleteLnkVisible(false);
             UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.CustomerInfo());
         }
 
@@ -55,6 +57,7 @@ namespace BankManagementSystem
             CustomerInfoBtn.BackColor = Color.White;
             EditInfoBtn.BackColor = Color.WhiteSmoke;
             DepositBtn.BackColor = Color.White;
+            DeleteLnkVisible(false);
             UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.EditInfo());
         }
 
@@ -78,7 +81,13 @@ namespace BankManagementSystem
             CustomerInfoBtn.BackColor = Color.White;
             EditInfoBtn.BackColor = Color.White;
             DepositBtn.BackColor = Color.WhiteSmoke;
+            DeleteLnkVisible(false);
             UILogics.LoadForm(MainPanel, new EmployeeDashboardForms.Deposit());
+        }
+        private void DeleteLnkVisible(bool @bool)
+        {
+            DeleteLnk.Visible = @bool;
+            DeleteAccountLbl.Visible = @bool;
         }
     }
 }

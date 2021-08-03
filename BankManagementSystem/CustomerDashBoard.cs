@@ -31,6 +31,7 @@ namespace BankManagementSystem
            HomeBtn.BackColor = Color.WhiteSmoke;
            DepositBtn.BackColor = Color.White;
            WithdrawBtn.BackColor = Color.White;
+           DeleteLnkVisible(true);
            UILogics.LoadForm(MainPanel,new Dashboard_Forms.Home(personModel));
         }
 
@@ -39,6 +40,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.White;
             DepositBtn.BackColor = Color.WhiteSmoke;
             WithdrawBtn.BackColor = Color.White;
+            DeleteLnkVisible(false);
             UILogics.LoadForm(MainPanel, new Dashboard_Forms.Deposit(personModel));
         }
 
@@ -47,6 +49,7 @@ namespace BankManagementSystem
             HomeBtn.BackColor = Color.White;
             DepositBtn.BackColor = Color.White;
             WithdrawBtn.BackColor = Color.WhiteSmoke;
+            DeleteLnkVisible(false);
             UILogics.LoadForm(MainPanel, new Dashboard_Forms.Withdraw(personModel));
         }
 
@@ -56,6 +59,11 @@ namespace BankManagementSystem
             {
                 Close();
             }
+        }
+        private void DeleteLnkVisible(bool @bool)
+        {
+            DeleteLnk.Visible = @bool;
+            DeleteAccountLbl.Visible = @bool;
         }
     }
 }
