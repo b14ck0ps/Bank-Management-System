@@ -5,8 +5,9 @@
 We will be trying to make a decent banking management system GUI software. Both 
 employee and customer can use it. User can create a new account or can login into an 
 existing account. A customer can view his account details, edit some details. Customer 
-can make deposit and withdraw money from his account. As for employee they can 
-view and edit their details and they can Update or remove a customer from database.
+can Transfer money to another account and withdraw money from his account. As for employee
+they can Deposit money to a customer account ,view and edit their own details and they can Update,
+Edit or remove a customer from database.
 
 
 ## Key concept
