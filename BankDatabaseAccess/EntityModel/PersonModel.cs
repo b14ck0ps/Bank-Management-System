@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankDatabaseAccess.EntityModel
 {
-    public abstract class PersonModel
+    public  class PersonModel
     {
         /// <summary>
         /// This is the Person Username. Value can not be null.

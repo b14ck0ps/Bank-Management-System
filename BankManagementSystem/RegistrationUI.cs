@@ -9,7 +9,7 @@ namespace BankManagementSystem
 {
     public partial class RegistrationUI : Form
     {
-        private readonly PersonModel User = new CustomerModel();
+        private readonly PersonModel User = new PersonModel();
         public RegistrationUI()
         {
             InitializeComponent();
