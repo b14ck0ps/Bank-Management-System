@@ -106,8 +106,16 @@ namespace BankManagementSystem.Dashboard_Forms
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            customer_Reciver.Username = TransferUsernameTextBox.Text;
-            UpdateReciverInfo();
+            if (customer_Sender.Username.ToLower() == TransferUsernameTextBox.Text.ToLower())
+            {
+                MessageBox.Show("You can not trasfer money from Your account TO  Your account !!");
+            }
+            else
+            {
+                customer_Reciver.Username = TransferUsernameTextBox.Text;
+                UpdateReciverInfo();
+            }
+            
         }
     }
 }
