@@ -9,7 +9,7 @@ namespace BankManagementSystem
 {
     public partial class RegistrationUI : Form
     {
-        readonly PersonModel User = new CustomerModel();
+        private readonly PersonModel User = new CustomerModel();
         public RegistrationUI()
         {
             InitializeComponent();
@@ -44,6 +44,7 @@ namespace BankManagementSystem
         }
         private void PasswordTextbox_Enter(object sender, EventArgs e)
         {
+            PasswordTextbox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: PasswordTextbox, placeholder: PasswordPlaceholder);
         }
 
@@ -107,14 +108,12 @@ namespace BankManagementSystem
                     UpdatedDB(new EmployeeOperations().Insert(User));
                 if (UILogics.IsCustomer())
                     UpdatedDB(new CustomerOperation().Insert(User));
-            }else
-                MessageBox.Show("Please Enter all the details");
+            }
         }
 
         private void LnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            this.Close();
+            Close();
             new LoginUI().Show();
         }
         #region Form validation logics
@@ -132,10 +131,10 @@ namespace BankManagementSystem
                 FullNametextBox.ForeColor = Color.OrangeRed;
                 output = false;
             }
-            if (string.IsNullOrEmpty(PasswordTextbox.Text) || PasswordTextbox.Text == PasswordPlaceholder)
+            if (!UILogics.PasswordChekcer(PasswordTextbox) || PasswordTextbox.Text == PasswordPlaceholder)
             {
                 PasswordTextbox.ForeColor = Color.OrangeRed;
-                output = false;
+                output = false; 
             }
             if (string.IsNullOrEmpty(EmailTextbox.Text) || EmailTextbox.Text == EmailPlaceholder)
             {

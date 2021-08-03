@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace BankManagementSystem
@@ -7,14 +8,20 @@ namespace BankManagementSystem
     public static class UILogics 
     {
         public static UserType User;
+        public static PasswordError passwordError;
         
         public enum UserType
         {
             Employee,
-            Customer 
-            
+            Customer    
         }
 
+        public enum PasswordError
+        {
+            NUllPassword,
+            LessThenEightChar,
+            NoUpperCaseChar
+        }
         public static bool IsCustomer()
         {
             if (User == UserType.Customer)
@@ -80,7 +87,30 @@ namespace BankManagementSystem
                 NumberDecimalDigits = n
             };
         }
+        /// <summary>
+        /// Check if user input is atleast 8 char long and atleast contain one Uppercase Char
+        /// </summary>
+        /// <param name="password">string</param>
+        /// <returns>true if input is atleast 8 char long and atleast contain one Uppercase Char</returns>
+        public static bool PasswordChekcer(TextBox password)
+        {
+            //bool output = true;
+            if (string.IsNullOrEmpty(password.Text))
+            {
+                MessageBox.Show("Please Enter Password");
+                return false;
+            }
+            if (password.Text.Length <= 8)
+            {
+                MessageBox.Show("Please Enter More Than 8 Charecter Password");
+                return false;
+            }
+            if (!Regex.Match(password.Text, @"[A-Z]+", RegexOptions.ECMAScript).Success)
+            {
+                MessageBox.Show("Please Enter At least One Upercase Charecter Password");
+                return false;
+            }
+            return true;
+        }
     }
-    
-
 }
