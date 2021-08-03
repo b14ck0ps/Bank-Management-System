@@ -34,11 +34,12 @@ namespace BankManagementSystem
             this.EditInfoBtn = new System.Windows.Forms.Button();
             this.LogoutBtn = new System.Windows.Forms.Button();
             this.NavigationPanel = new System.Windows.Forms.Panel();
+            this.DepositBtn = new System.Windows.Forms.Button();
             this.LogopictureBox = new System.Windows.Forms.PictureBox();
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.DeleteLnk = new System.Windows.Forms.LinkLabel();
             this.DeleteAccountLbl = new System.Windows.Forms.Label();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.NavigationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogopictureBox)).BeginInit();
             this.BottomPanel.SuspendLayout();
@@ -50,7 +51,7 @@ namespace BankManagementSystem
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeBtn.ForeColor = System.Drawing.Color.ForestGreen;
-            this.HomeBtn.Location = new System.Drawing.Point(367, 37);
+            this.HomeBtn.Location = new System.Drawing.Point(307, 37);
             this.HomeBtn.Name = "HomeBtn";
             this.HomeBtn.Size = new System.Drawing.Size(122, 71);
             this.HomeBtn.TabIndex = 1;
@@ -64,7 +65,7 @@ namespace BankManagementSystem
             this.CustomerInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomerInfoBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerInfoBtn.ForeColor = System.Drawing.Color.ForestGreen;
-            this.CustomerInfoBtn.Location = new System.Drawing.Point(556, 37);
+            this.CustomerInfoBtn.Location = new System.Drawing.Point(455, 37);
             this.CustomerInfoBtn.Name = "CustomerInfoBtn";
             this.CustomerInfoBtn.Size = new System.Drawing.Size(122, 71);
             this.CustomerInfoBtn.TabIndex = 2;
@@ -77,11 +78,11 @@ namespace BankManagementSystem
             this.EditInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditInfoBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditInfoBtn.ForeColor = System.Drawing.Color.ForestGreen;
-            this.EditInfoBtn.Location = new System.Drawing.Point(745, 37);
+            this.EditInfoBtn.Location = new System.Drawing.Point(612, 37);
             this.EditInfoBtn.Name = "EditInfoBtn";
             this.EditInfoBtn.Size = new System.Drawing.Size(122, 71);
             this.EditInfoBtn.TabIndex = 3;
-            this.EditInfoBtn.Text = "Edit Info";
+            this.EditInfoBtn.Text = "Edit Customer Info";
             this.EditInfoBtn.UseVisualStyleBackColor = true;
             this.EditInfoBtn.Click += new System.EventHandler(this.EditInfoBtn_Click);
             // 
@@ -101,6 +102,7 @@ namespace BankManagementSystem
             // 
             // NavigationPanel
             // 
+            this.NavigationPanel.Controls.Add(this.DepositBtn);
             this.NavigationPanel.Controls.Add(this.LogopictureBox);
             this.NavigationPanel.Controls.Add(this.CustomerInfoBtn);
             this.NavigationPanel.Controls.Add(this.HomeBtn);
@@ -110,6 +112,19 @@ namespace BankManagementSystem
             this.NavigationPanel.Name = "NavigationPanel";
             this.NavigationPanel.Size = new System.Drawing.Size(934, 130);
             this.NavigationPanel.TabIndex = 7;
+            // 
+            // DepositBtn
+            // 
+            this.DepositBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DepositBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepositBtn.ForeColor = System.Drawing.Color.ForestGreen;
+            this.DepositBtn.Location = new System.Drawing.Point(763, 37);
+            this.DepositBtn.Name = "DepositBtn";
+            this.DepositBtn.Size = new System.Drawing.Size(122, 71);
+            this.DepositBtn.TabIndex = 4;
+            this.DepositBtn.Text = "Deposit";
+            this.DepositBtn.UseVisualStyleBackColor = true;
+            this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 
             // LogopictureBox
             // 
@@ -130,14 +145,6 @@ namespace BankManagementSystem
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(934, 74);
             this.BottomPanel.TabIndex = 8;
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 130);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(934, 347);
-            this.MainPanel.TabIndex = 9;
             // 
             // DeleteLnk
             // 
@@ -162,6 +169,14 @@ namespace BankManagementSystem
             this.DeleteAccountLbl.Size = new System.Drawing.Size(94, 17);
             this.DeleteAccountLbl.TabIndex = 2;
             this.DeleteAccountLbl.Text = "This Account !";
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 130);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(934, 347);
+            this.MainPanel.TabIndex = 9;
             // 
             // EmployeeDashBoard
             // 
@@ -202,5 +217,6 @@ namespace BankManagementSystem
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.LinkLabel DeleteLnk;
         private System.Windows.Forms.Label DeleteAccountLbl;
+        private System.Windows.Forms.Button DepositBtn;
     }
 }

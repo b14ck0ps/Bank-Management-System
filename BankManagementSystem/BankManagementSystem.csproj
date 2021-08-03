@@ -84,6 +84,12 @@
     <Compile Include="EmployeeDashboardForms\CustomerInfo.Designer.cs">
       <DependentUpon>CustomerInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeDashboardForms\Deposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboardForms\Deposit.Designer.cs">
+      <DependentUpon>Deposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDashboardForms\EditInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDashboardForms\CustomerInfo.resx">
       <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashboardForms\Deposit.resx">
+      <DependentUpon>Deposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDashboardForms\EditInfo.resx">
       <DependentUpon>EditInfo.cs</DependentUpon>
