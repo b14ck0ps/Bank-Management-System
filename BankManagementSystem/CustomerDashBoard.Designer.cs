@@ -36,9 +36,9 @@ namespace BankManagementSystem
             this.LogopictureBox = new System.Windows.Forms.PictureBox();
             this.NavigationPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
-            this.DeleteAccountLbl = new System.Windows.Forms.Label();
             this.DeleteLnk = new System.Windows.Forms.LinkLabel();
+            this.DeleteAccountLbl = new System.Windows.Forms.Label();
+            this.MainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.LogopictureBox)).BeginInit();
             this.NavigationPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
@@ -68,7 +68,7 @@ namespace BankManagementSystem
             this.DepositBtn.Name = "DepositBtn";
             this.DepositBtn.Size = new System.Drawing.Size(122, 55);
             this.DepositBtn.TabIndex = 2;
-            this.DepositBtn.Text = "Deposit";
+            this.DepositBtn.Text = "Transfer";
             this.DepositBtn.UseVisualStyleBackColor = false;
             this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 
@@ -131,24 +131,6 @@ namespace BankManagementSystem
             this.BottomPanel.Size = new System.Drawing.Size(934, 74);
             this.BottomPanel.TabIndex = 8;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 130);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(934, 347);
-            this.MainPanel.TabIndex = 9;
-            // 
-            // DeleteAccountLbl
-            // 
-            this.DeleteAccountLbl.AutoSize = true;
-            this.DeleteAccountLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteAccountLbl.Location = new System.Drawing.Point(828, 48);
-            this.DeleteAccountLbl.Name = "DeleteAccountLbl";
-            this.DeleteAccountLbl.Size = new System.Drawing.Size(94, 17);
-            this.DeleteAccountLbl.TabIndex = 0;
-            this.DeleteAccountLbl.Text = "This Account !";
-            // 
             // DeleteLnk
             // 
             this.DeleteLnk.ActiveLinkColor = System.Drawing.Color.Firebrick;
@@ -161,7 +143,27 @@ namespace BankManagementSystem
             this.DeleteLnk.TabIndex = 1;
             this.DeleteLnk.TabStop = true;
             this.DeleteLnk.Text = "Delete";
+            this.DeleteLnk.Visible = false;
             this.DeleteLnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteLnk_LinkClicked);
+            // 
+            // DeleteAccountLbl
+            // 
+            this.DeleteAccountLbl.AutoSize = true;
+            this.DeleteAccountLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAccountLbl.Location = new System.Drawing.Point(828, 48);
+            this.DeleteAccountLbl.Name = "DeleteAccountLbl";
+            this.DeleteAccountLbl.Size = new System.Drawing.Size(94, 17);
+            this.DeleteAccountLbl.TabIndex = 0;
+            this.DeleteAccountLbl.Text = "This Account !";
+            this.DeleteAccountLbl.Visible = false;
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 130);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(934, 347);
+            this.MainPanel.TabIndex = 9;
             // 
             // CustomerDashBoard
             // 
