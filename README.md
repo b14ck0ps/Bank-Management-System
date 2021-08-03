@@ -13,7 +13,7 @@ view and edit their details and they can Update or remove a customer from databa
 
 1. SQL
 2. Interface
-3. Abstract
+3. Error Handling
 4. Add remove data for SQL server
 
 
