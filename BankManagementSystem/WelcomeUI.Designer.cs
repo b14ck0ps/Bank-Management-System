@@ -29,6 +29,7 @@ namespace BankManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeUI));
             this.WelcomeLbl = new System.Windows.Forms.Label();
             this.AppCloseLbl = new System.Windows.Forms.Label();
             this.EmpLink = new System.Windows.Forms.LinkLabel();
@@ -132,9 +133,9 @@ namespace BankManagementSystem
             this.Controls.Add(this.WelcomeLbl);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "WelcomeUI";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicure)).EndInit();

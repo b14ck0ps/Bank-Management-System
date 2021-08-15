@@ -29,6 +29,7 @@ namespace BankManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashBoard));
             this.HomeBtn = new System.Windows.Forms.Button();
             this.CustomerInfoBtn = new System.Windows.Forms.Button();
             this.EditInfoBtn = new System.Windows.Forms.Button();
@@ -192,11 +193,11 @@ namespace BankManagementSystem
             this.Controls.Add(this.BottomPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EmployeeDashBoard";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";
             this.NavigationPanel.ResumeLayout(false);
