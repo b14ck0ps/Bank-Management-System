@@ -105,14 +105,20 @@ namespace BankManagementSystem.EmployeeDashboardForms
         {
             if (EffectedRow > 0)
                 MessageBox.Show("Deposit Succesfully.");
-            else
-                MessageBox.Show("Something Went Wrong!");
         }
         private decimal GetBalance()
         {
             DataTable data;
             data = new DataReader().GetSingleData(customer, customer: true, employee:false);
-            return (decimal)(data.Rows[0][5]);
+            try
+            {
+                return (decimal)(data.Rows[0][5]);
+            }
+            catch (System.Exception)
+            {
+                return 0;
+            }
+            
         }
     }
 }
