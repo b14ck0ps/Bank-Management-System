@@ -17,11 +17,12 @@ namespace BankDatabaseAccess.DatabaseOperation
         /// <returns>Returns Row Number</returns>
         public int Insert(PersonModel personModel)
         {
-            var query = @"INSERT INTO dbo.[dbo.Employee](Username,FullName,Password,Email,Phone,Nid,Salary) 
+            var query = @"INSERT INTO dbo.[dbo.Employee](Username,FullName,Password,Email,Address,Phone,Nid,Salary) 
                           VALUES ('" + personModel.Username + "'," +
                           "'" + personModel.FullName + "'," +
                           "'" + personModel.Password + "'," +
                           "'" + personModel.Eamil + "'," +
+                          "'" + personModel.Address + "'," +
                           "'" + personModel.Phone + "'," +
                           "'" + personModel.Nid + "'," +
                           "'" + new Random().Next(30000, 1000000).ToString() + "')"; // generates Salary from 30k to 100k
