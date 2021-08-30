@@ -162,6 +162,11 @@ namespace BankManagementSystem
                 Nidtextbox.ForeColor = Color.OrangeRed;
                 output = false;
             }
+            if (!UILogics.NidCkecker(Nidtextbox))
+            {
+                Nidtextbox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
             if (string.IsNullOrEmpty(AddressTextbox.Text) || AddressTextbox.Text == AddressPlaceholder)
             {
                 AddressTextbox.ForeColor = Color.OrangeRed;

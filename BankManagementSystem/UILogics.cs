@@ -127,6 +127,25 @@ namespace BankManagementSystem
     
         }
         /// <summary>
+        /// check if its a valid nid
+        /// </summary>
+        /// <param name="nid">nid</param>
+        /// <returns>true or false</returns>
+        public static bool NidCkecker(TextBox nid)
+        {
+
+            if (Regex.IsMatch(nid.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please Enter valid NID");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        /// <summary>
         /// Show YES CANCLE Warning Before deleting user account
         /// </summary>
         /// <param name="personModel">Person object</param>
