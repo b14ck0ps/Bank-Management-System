@@ -3,6 +3,7 @@ using BankDatabaseAccess.DatabaseOperation;
 using BankDatabaseAccess.EntityModel;
 using System;
 using System.Drawing;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace BankManagementSystem
@@ -136,10 +137,15 @@ namespace BankManagementSystem
                 PasswordTextbox.ForeColor = Color.OrangeRed;
                 output = false; 
             }
-            if (string.IsNullOrEmpty(EmailTextbox.Text) || EmailTextbox.Text == EmailPlaceholder)
+            try
+            {
+                new MailAddress(EmailTextbox.Text); // return Exception if string doesnt contain '@' or and if string is empty 
+            }
+            catch (FormatException)
             {
                 EmailTextbox.ForeColor = Color.OrangeRed;
                 output = false;
+                MessageBox.Show("Invalid Email Address");
             }
             //if phone number not given store N/A to database
             if (string.IsNullOrEmpty(PhoneTextBox.Text) || PhoneTextBox.Text == PhonePlaceholder)
