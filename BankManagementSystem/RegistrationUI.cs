@@ -27,6 +27,7 @@ namespace BankManagementSystem
         #region Place Holder logics
         private void UsernameTextbox_Enter(object sender, EventArgs e)
         {
+            UsernameTextbox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: UsernameTextbox, placeholder: UsernamePlaceholder);
         }
 
@@ -36,6 +37,7 @@ namespace BankManagementSystem
         }
         private void FullNametextBox_Enter(object sender, EventArgs e)
         {
+            FullNametextBox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: FullNametextBox, placeholder: FullnamePlaceholder);
         }
 
@@ -56,6 +58,7 @@ namespace BankManagementSystem
 
         private void EmailTextbox_Enter(object sender, EventArgs e)
         {
+            EmailTextbox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: EmailTextbox, placeholder: EmailPlaceholder);
         }
 
@@ -66,6 +69,7 @@ namespace BankManagementSystem
 
         private void PhoneTextBox_Enter(object sender, EventArgs e)
         {
+            PhoneTextBox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: PhoneTextBox, placeholder: PhonePlaceholder);
         }
 
@@ -76,6 +80,7 @@ namespace BankManagementSystem
 
         private void AddressTextbox_Enter(object sender, EventArgs e)
         {
+            AddressTextbox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: AddressTextbox, placeholder: AddressPlaceholder);
         }
 
@@ -86,6 +91,7 @@ namespace BankManagementSystem
 
         private void Nidtextbox_Enter(object sender, EventArgs e)
         {
+            Nidtextbox.ForeColor = Color.Black;
             UILogics.EnterUpdate(textBox: Nidtextbox, placeholder: NidPlaceholder);
         }
 
