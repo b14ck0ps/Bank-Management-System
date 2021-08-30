@@ -146,6 +146,11 @@ namespace BankManagementSystem
             {
                 User.Phone = "N/A";
             }
+            if (!UILogics.PhoneNumberCkecker(PhoneTextBox))
+            {
+                PhoneTextBox.ForeColor = Color.OrangeRed;
+                output = false;
+            }
             if (string.IsNullOrEmpty(Nidtextbox.Text) || Nidtextbox.Text == NidPlaceholder)
             {
                 Nidtextbox.ForeColor = Color.OrangeRed;

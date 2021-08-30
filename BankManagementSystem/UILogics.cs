@@ -107,6 +107,26 @@ namespace BankManagementSystem
             return true;
         }
         /// <summary>
+        /// check if its a valid phone number
+        /// </summary>
+        /// <param name="phonenumber">textbox</param>
+        /// <returns>true or false</returns>
+        public static bool PhoneNumberCkecker(TextBox phonenumber)
+        {
+
+            if (Regex.IsMatch(phonenumber.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please Enter valid phone number");
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+    
+        }
+        /// <summary>
         /// Show YES CANCLE Warning Before deleting user account
         /// </summary>
         /// <param name="personModel">Person object</param>
